@@ -1,0 +1,13 @@
+.separator {
+  /* background-image: linear-gradient(to right , #13ADC7 , #945DD6); */
+  width: 7rem;
+  height: 8px;
+  margin: 4rem 13%;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 850px) {
+  .separator {
+    width: 70%;
+  }
+}

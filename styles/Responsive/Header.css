@@ -1,0 +1,9 @@
+@media screen and (max-width: 850px) {
+  .header {
+    flex-direction: column;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* padding: 1.5rem; */
+  }
+}

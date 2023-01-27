@@ -1,0 +1,37 @@
+.projects_container {
+  flex-direction: column;
+}
+
+.projects_container h2 {
+  background: linear-gradient(
+    121.57deg,
+    #ffffff 18.77%,
+    rgba(255, 255, 255, 0.66) 60.15%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5rem;
+  font-weight: bolder;
+}
+
+.projects_container main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 4rem;
+  grid-gap: 2rem;
+}
+
+@media screen and (max-width: 1080px) {
+  .projects_container {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .projects_container h2 {
+    font-size: 4rem;
+  } 
+  .projects_container main {
+    display: block;
+  }
+}

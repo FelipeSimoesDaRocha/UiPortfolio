@@ -1,0 +1,14 @@
+.image_social {
+  display: block;
+  cursor: pointer;
+}
+
+.a_link {
+  padding: 6px 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  font-weight: 600;
+}

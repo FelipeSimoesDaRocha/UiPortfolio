@@ -1,0 +1,158 @@
+.hero_container {
+  margin-bottom: 4.1rem;
+  width: 70%;
+  margin-left: 13%;
+  display: flex;
+  gap: 1rem;
+}
+
+.page {
+  margin: 0 auto;
+}
+
+.hero_container main {
+  max-width: 56%;
+}
+.hero_title {
+  color: #fff;
+  font-size: 3.5rem;
+  animation: moveToRight 2s ease-in-out;
+}
+
+.hero_title strong {
+  color: #11a36a;
+}
+
+.hero_paragrafo {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  max-width: 70%;
+  animation: moveToLeft 2s ease-in-out;
+}
+
+.hero_paragrafo strong {
+  color: #11a36a;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.hero_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.4rem;
+  width: 14rem;
+  height: 4rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: bolder;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  background-image: linear-gradient(to right, #13adc7, #945dd6);
+  animation: showButton 1.5s ease-in-out 2.4s backwards;
+}
+
+@keyframes moveToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+
+  80% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+
+  80% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes showButton {
+  0% {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  /* .page { */
+  /*   background-color: red; */
+  /* } */
+  .hero_container {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .hero_title {
+    font-size: 2.5rem;
+  }
+
+  .hero_paragrafo {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    max-width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 850px) {
+  .hero_container {
+    flex-direction: column-reverse;
+  }
+
+  .hero_container main {
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero_title {
+    font-size: 2.5rem;
+  }
+
+  .hero_paragrafo {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
+
+  .hero_button {
+    display: inline-block;
+    line-height: 100%;
+    width: 100%;
+  }
+}
+
+

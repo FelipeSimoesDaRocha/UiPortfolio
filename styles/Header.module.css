@@ -1,0 +1,92 @@
+@import './Responsive/Header.css';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.div_span_portfolio {
+  display: flex;
+  align-items: center;
+}
+.span_portfolio {
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.hamburger {
+  display: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.header_nav {
+  display: flex;
+  gap: 2rem;
+  color: rgba(255, 255, 255, 0.75);
+  transition: height 1s ease-in-out;
+}
+
+.link_nav {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.link_nav:hover {
+  color: #fff;
+}
+
+.nav_socials {
+  margin-right: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+.social_link {
+  transition: all 0.4s ease;
+}
+.social_link:hover {
+  transform: scaleX(1.4) scaleY(1.4);
+}
+
+
+
+@media screen and (max-width: 850px) {
+  .header {
+    display: block;
+  }
+
+  .div_span_portfolio {
+    align-self: flex-start;
+    justify-content:space-between;
+    line-height: 100%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .header_nav {
+    gap: 0.6rem;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    height: 0;
+    overflow: hidden;
+  }
+
+  .nav_socials {
+    margin-right: 0rem;
+    justify-content: center;
+
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+
