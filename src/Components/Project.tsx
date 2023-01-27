@@ -1,4 +1,4 @@
-import type { ProjectType } from "../src/data/projects";
+import { ProjectType } from "../data/projects";
 
 import styles from "../styles/Project-Single.module.css";
 
@@ -14,7 +14,7 @@ const Project = ({ githubUrl, name, image, description }: ProjectType) => {
         <p>{description}</p>
       </main>
       <footer className={styles.project_footer}>
-        <a href={githubUrl} target="_blank">
+        <a href={githubUrl} target="blank">
           Code
         </a>
       </footer>

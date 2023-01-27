@@ -3,8 +3,7 @@ import Project from "../Components/Project";
 import Header from "../Components/Header";
 import utils from "../styles/utils.module.css";
 
-import projects from "../src/data/projects";
-
+import projects from "../data/projects";
 
 const ProjectsPage = () => {
   // const [loading, setLoading] = useState(true);
