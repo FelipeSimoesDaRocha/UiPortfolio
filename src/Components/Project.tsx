@@ -1,6 +1,12 @@
-import { ProjectType } from "../data/projects";
-
 import styles from "../styles/Project-Single.module.css";
+
+type ProjectType = {
+  name: string;
+  image: string;
+  githubUrl: string;
+  description: string;
+};
+
 
 const Project = ({ githubUrl, name, image, description }: ProjectType) => {
   return (

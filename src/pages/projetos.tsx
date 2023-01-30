@@ -39,7 +39,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch('https://api.github.com/users/FelipeSimoesDaRocha/repos');
   const data = await response.json();
 
-  const repositories = data.map(repository => {
+  const repositories = data.map((repository: { name: any; description: any; }) => {
     return {
       name: repository.name,
       description: repository.description,
