@@ -1,13 +1,9 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-type Data = {
-  name: string
-}
+export default (req: NextApiRequest, res: NextApiResponse) => {
+  const date = new Date().toISOString()
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  res.status(200).json({ name: 'John Doe' })
+  res.setHeader('Cache-Control', 's-maxage=5, stale-while-revalidate');
+
+  res.status(200).json({ name: 'John Doe' ,date})
 }

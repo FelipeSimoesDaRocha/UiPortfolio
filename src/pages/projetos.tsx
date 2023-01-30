@@ -2,19 +2,31 @@ import styles from "../styles/Projetcs-Section.module.css";
 import Project from "../Components/Project";
 import Header from "../Components/Header";
 import utils from "../styles/utils.module.css";
+import { GetStaticProps } from "next";
 
-import projects from "../data/projects";
+type Repository = {
+  id: number,
+  name: string;
+  image: string;
+  githubUrl: string;
+  description: string;
+};
 
-const ProjectsPage = () => {
-  // const [loading, setLoading] = useState(true);
+type HomeProps = {
+  repositories: Repository[];
+};
 
+
+const ProjectsPage = ({ repositories }: HomeProps) => {
   return (
     <>
       <Header />
       <section className={`${utils.container} ${styles.projects_container} `}>
         <h2>Projetos</h2>
         <main>
-          {projects.map(item => (<Project key={item.id} {...item}/>))}
+          {repositories.map(item => (
+            <Project key={item.id} {...item} />
+          ))}
         </main>
       </section>
     </>
@@ -22,3 +34,19 @@ const ProjectsPage = () => {
 };
 
 export default ProjectsPage;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const response = await fetch('https://api.github.com/users/FelipeSimoesDaRocha/repos');
+  const data = await response.json();
+
+  const repositories = data.map(repository => {
+    return {
+      name: repository.name,
+      description: repository.description,
+    };
+  });
+
+  return {
+    props: { repositories, }, revalidate: 60 * 5
+  }
+}
