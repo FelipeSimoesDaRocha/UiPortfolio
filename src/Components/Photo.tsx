@@ -1,6 +1,9 @@
 import Image from "next/image";
 import style from "../styles/Photo.module.css";
 import Button from "./SocialButton";
+import Img from '../../public/assets/photo.jpeg'
+
+
 
 type Socials = {
   name: string;
@@ -31,7 +34,7 @@ const Photo = () => {
     <aside className={style.photo_aside}>
       <div className={style.photo}>
         <Image
-          src="/assets/meudesenho.Jpeg"
+          src={Img}
           alt="Imagem de Felipe Rocha"
           className={style.photo}
           width={800}
