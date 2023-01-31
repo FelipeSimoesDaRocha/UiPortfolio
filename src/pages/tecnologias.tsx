@@ -1,11 +1,8 @@
 import {
   SiJavascript,
   SiTypescript,
-  SiPython,
   SiNextdotjs,
   SiNodedotjs,
-  SiExpress,
-  SiAdonisjs,
   SiNestjs,
   SiPostgresql,
   SiMongodb,
@@ -62,14 +59,6 @@ const TecnologiesPage = () => {
                 Node
               </li>
               <li>
-                <SiExpress fill="#fff" />
-                Express JS
-              </li>
-              <li>
-                <SiAdonisjs fill="#1f004e" />
-                Adonis JS
-              </li>
-              <li>
                 <SiNestjs fill="#df214d" />
                 Nest JS
               </li>
@@ -91,10 +80,6 @@ const TecnologiesPage = () => {
               <li>
                 <SiTypescript fill="#0079cc" />
                 Typescript
-              </li>
-              <li>
-                <SiPython />
-                Python
               </li>
             </ul>
           </div>

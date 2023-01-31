@@ -1,9 +1,7 @@
 import styles from '../styles/BackGroundAnimation.module.css';
 
 const BackgroundAnimation = () => (
-  <div
-    className={styles.bg}
-  >
+  <div className={styles.bg}>
     <svg
       className="BgAnimation__svg"
       viewBox="0 0 602 602"

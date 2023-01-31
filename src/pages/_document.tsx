@@ -12,7 +12,7 @@ const Document = () => {
         <title>Felipe Rocha 💻</title>
         <meta charSet="utf-8" />
         <meta name='description' content='Portfólio de Felipe Simões Da Rocha' />
-        <meta property="og:title" content="Felipe Rocha - Developer Front-ENd" />
+        <meta property="og:title" content="Felipe Rocha - Developer Front-End" />
         <meta property="og:image" content="" />
         <meta property="og:type" content="website" />
         <link href="https://felipe-rocha.vercel.app/" rel="canonical" />

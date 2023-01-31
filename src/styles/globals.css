@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
   background-color: #0f1624;
+  -webkit-font-smoothing: antialiased;
 }
 
 @font-face {
