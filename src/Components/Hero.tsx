@@ -20,11 +20,7 @@ const Hero = () => {
 
           <p className={styles.hero_paragrafo}>
             Sou um Dev fullstack com destaque para Front-end, estudante De
-            desenvolvimento web
-            {/* <a href="">
-              <strong></strong>
-            </a> */}
-            , sempre em busca do proximo nivel!
+            desenvolvimento web, sempre em busca do proximo nivel!
           </p>
 
           <Link href="/projetos">

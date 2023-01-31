@@ -4,10 +4,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import styles from "../styles/Header.module.css";
 
 const Header = () => {
-  const [show,setShow] = useState(false);
+  const [show, setShow] = useState(false);
 
-  const handleShowMenu = () => setShow(!show) ;
-  
+  const handleShowMenu = () => setShow(!show);
+
+  const linkedin = "https://www.linkedin.com/in/felipe-sim%C3%B5es-da-rocha"
+  const github = "https://github.com/FelipeSimoesDaRocha"
 
   return (
     <header className={styles.header}>
@@ -32,9 +34,9 @@ const Header = () => {
         </div>
       </div>
 
-      <nav 
-        className={`${styles.header_nav} `} 
-        style={{height:`${show ? 'auto' : '0'}`}}
+      <nav
+        className={`${styles.header_nav} `}
+        style={{ height: `${show ? 'auto' : '0'}` }}
       >
         <Link Href="/projetos" className={styles.link_nav}>
           Projetos
@@ -44,13 +46,13 @@ const Header = () => {
         </Link>
       </nav>
 
-      <nav 
+      <nav
         className={styles.nav_socials}
-        style={{height:`${show ? 'auto' : '0'}`}}
+        style={{ height: `${show ? 'auto' : '0'}` }}
       >
         <a
           className={styles.social_link}
-          href="https://github.com/FelipeSimoesDaRocha"
+          href={github}
           target="_blank"
           rel="noreferrer"
         >
@@ -68,7 +70,7 @@ const Header = () => {
         </a>
         <a
           className={styles.social_link}
-          href="https://www.linkedin.com/in/felipe-sim%C3%B5es-da-rocha"
+          href={linkedin}
           target="_blank"
           rel="noreferrer"
         >
