@@ -2,7 +2,6 @@ import Link from "next/link";
 import styles from "../styles/Hero.module.css";
 import BackgroundAnimation from "./BgAnimation";
 import Photo from "./Photo";
-import utils from "../styles/utils.module.css";
 
 const Hero = () => {
   return (
