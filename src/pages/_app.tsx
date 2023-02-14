@@ -9,7 +9,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Analytics />
     </>
   )
-
 }
 
 export default MyApp

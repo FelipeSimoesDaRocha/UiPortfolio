@@ -7,7 +7,7 @@
 }
 
 .photo {
-  animation: moveToLeft 2s ease-in-out 2.3s;
+  animation: moveToLeft 2s ease-in-out 1.3s;
   animation-fill-mode: backwards;
 }
 

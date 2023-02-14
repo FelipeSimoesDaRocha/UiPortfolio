@@ -37,9 +37,9 @@ const Photo = () => {
           src={Img}
           alt="Imagem de Felipe Rocha"
           className={style.photo}
-          width={800}
-          height={800}
-          style={{ borderRadius: "3333px" }}
+          width={500}
+          height={500}
+          style={{ borderRadius: "50%" }}
         />
       </div>
 

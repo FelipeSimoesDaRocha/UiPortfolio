@@ -1,10 +1,7 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Space Grotesk", sans-serif;
-  background-color: #0f1624;
-  -webkit-font-smoothing: antialiased;
+::selection{
+  background-color: transparent;
+  color: #11a36a;
+  text-shadow: 2px 2px #000;
 }
 
 @font-face {
@@ -17,10 +14,36 @@ body {
     U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #0f1624;
+  font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-feature-settings: "case" 1, "cpsp" 1, "dlig" 1, "cv01" 1, "cv02", "cv03" 1, "cv04" 1;
+  font-variation-settings: "wght" 450;
+  font-variant: common-ligatures contextual;
+  letter-spacing: -0.02em;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
+
+
+
+
+@media screen and (min-device-pixel-ratio: 1.5),
+  screen and (min-resolution: 1.5dppx) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
 
 * {
   box-sizing: border-box;

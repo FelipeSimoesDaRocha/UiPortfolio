@@ -2,20 +2,33 @@ import Link from "next/link";
 import styles from "../styles/Hero.module.css";
 import BackgroundAnimation from "./BgAnimation";
 import Photo from "./Photo";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
     <main className={styles.page}>
       <BackgroundAnimation />
-
       <div className={` ${styles.hero_container} `}>
         <main className="hero_main">
+          <h2 className={styles.hero_title}>
+            Olá,
+            <div className="">
+              eu sou o <b className="">Felipe!</b>
+            </div>
+          </h2>
 
-          <h1 className={styles.hero_title}>
-            Prazer, Sou o <strong>Felipe!</strong>
-            <br />
-            Vamos Codar?
-          </h1>
+          <TypeAnimation
+            sequence={[
+              "Desenvolvedor Front-end", // Types 'One'
+              1500, // Waits 1s
+              "Desenvolvedor UX", // Types 'Three' without deleting 'Two'
+              1500,
+            ]}
+            wrapper="h2"
+            cursor={true}
+            repeat={Infinity}
+            className={styles.hero_paragrafo}
+          />
 
           <p className={styles.hero_paragrafo}>
             Sou um Dev fullstack com destaque para Front-end, estudante De
