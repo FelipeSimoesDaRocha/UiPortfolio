@@ -11,10 +11,7 @@ const Hero = () => {
       <div className={` ${styles.hero_container} `}>
         <main className="hero_main">
           <h2 className={styles.hero_title}>
-            Olá,
-            <div className="">
-              eu sou o <b className="">Felipe!</b>
-            </div>
+            Olá, eu sou <strong>Felipe!</strong>
           </h2>
 
           <TypeAnimation
