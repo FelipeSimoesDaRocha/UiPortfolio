@@ -1,9 +1,7 @@
 import Image from "next/image";
 import style from "../styles/Photo.module.css";
 import Button from "./SocialButton";
-import Img from '../../public/assets/photo.jpeg'
-
-
+import Img from '../../public/assets/photo.png'
 
 type Socials = {
   name: string;
@@ -38,8 +36,7 @@ const Photo = () => {
           alt="Imagem de Felipe Rocha"
           className={style.photo}
           width={500}
-          height={500}
-          style={{ borderRadius: "50%" }}
+          height={622}
         />
       </div>
 

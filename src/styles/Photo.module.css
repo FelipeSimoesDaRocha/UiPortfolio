@@ -9,6 +9,7 @@
 .photo {
   animation: moveToLeft 2s ease-in-out 1.3s;
   animation-fill-mode: backwards;
+  border-radius: 0 0 36% 3%;
 }
 
 .image_socials {
@@ -43,14 +44,11 @@
 }
 
 @media screen and (max-width: 1250px) {
-  
-
-.photo_aside {
+  .photo_aside {
     width: 100%;
-}
+  }
 
-  .photo{
+  .photo {
     width: 300px;
   }
 }
-
