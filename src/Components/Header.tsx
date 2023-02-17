@@ -51,6 +51,7 @@ const Header = () => {
           href={"https://github.com/FelipeSimoesDaRocha"}
           target="_blank"
           rel="noreferrer"
+          aria-label="github"
         >
           <svg
             stroke="currentColor"
@@ -70,6 +71,7 @@ const Header = () => {
           }
           target="_blank"
           rel="noreferrer"
+          aria-label="linkedin"
         >
           <svg
             stroke="currentColor"
