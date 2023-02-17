@@ -23,7 +23,7 @@ const Hero = () => {
             wrapper="h2"
             cursor={true}
             repeat={Infinity}
-            className={styles.hero_paragrafo}
+            className={styles.hero_sub_title}
           />
 
           <p className={styles.hero_paragrafo}>

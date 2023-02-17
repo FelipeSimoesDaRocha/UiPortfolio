@@ -1,5 +1,6 @@
 .page {
   margin: 0 auto;
+  padding-top: 80px !important;
 }
 
 .hero_container {
@@ -10,6 +11,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 80px;
+
 }
 
 .hero_container main {
@@ -26,6 +29,10 @@
 
 .hero_title strong {
   color: #11a36a;
+}
+
+.hero_sub_title {
+  color: #fff;
 }
 
 .hero_paragrafo {
