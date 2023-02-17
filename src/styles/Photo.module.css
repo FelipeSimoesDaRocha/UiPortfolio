@@ -46,17 +46,9 @@
 @media screen and (max-width: 1250px) {
   .photo_aside {
     width: 100%;
-    height: auto;
   }
 
   .photo {
     width: 300px;
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .photo {
-    border-radius: 10% 10%;
   }
 }
