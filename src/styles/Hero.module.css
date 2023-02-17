@@ -1,19 +1,22 @@
-.hero_container {
-  margin-bottom: 4.1rem;
-  width: 70%;
-  margin-left: 13%;
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-}
-
 .page {
   margin: 0 auto;
 }
 
+.hero_container {
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .hero_container main {
   max-width: 56%;
+  z-index: 2;
 }
+
 .hero_title {
   margin: 0;
   color: #fff;

@@ -13,12 +13,11 @@ const Hero = () => {
           <h2 className={styles.hero_title}>
             Olá, eu sou <strong>Felipe!</strong>
           </h2>
-
           <TypeAnimation
             sequence={[
-              "Desenvolvedor Front-end", // Types 'One'
-              1500, // Waits 1s
-              "Desenvolvedor UX", // Types 'Three' without deleting 'Two'
+              "Desenvolvedor Front-end",
+              1500,
+              "Desenvolvedor UX",
               1500,
             ]}
             wrapper="h2"
@@ -28,8 +27,8 @@ const Hero = () => {
           />
 
           <p className={styles.hero_paragrafo}>
-            Sou um Dev fullstack com destaque para Front-end, estudante De
-            desenvolvimento web, sempre em busca do proximo nivel!
+            Minha paixão é sonhar com ideias e torná-las realidade com interfaces elegantes.
+            Sempre em busca do proximo nivel.
           </p>
 
           <Link href="/projetos">
