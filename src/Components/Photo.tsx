@@ -36,7 +36,7 @@ const Photo = () => {
           alt="Imagem de Felipe Rocha"
           className={style.photo}
           width={640}
-          height={799}
+          height={800}
         />
       </div>
 
