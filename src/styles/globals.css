@@ -43,3 +43,19 @@ a {
 * {
   box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+  width: 0.5svw;
+  background: #777;
+}
+
+::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(transparent, #11a36a);
+  background: linear-gradient(transparent, #11a36a);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: -webkit-gradient(transparent, #113188);
+  background: linear-gradient(transparent, #390faa);
+}

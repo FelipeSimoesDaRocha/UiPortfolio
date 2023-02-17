@@ -60,11 +60,10 @@
 }
 
 @media screen and (max-width: 1080px) {
-  
   .tecnologies_page {
     margin: 0 auto;
     text-align: center;
-  } 
+  }
 
   .tecnologies_page h1 {
     font-size: 4rem;
@@ -87,13 +86,12 @@
   .tecnologies_footer div ul {
     align-items: center;
   }
-
 }
 
 @media screen and (max-width: 660px) {
   .tecnologies_page {
     margin: 0 auto;
-  } 
+  }
   .tecnologies_page h1 {
     font-size: 3rem;
   }
@@ -101,5 +99,4 @@
   .tecnologies_page p {
     font-size: 1.3rem;
   }
-
 }

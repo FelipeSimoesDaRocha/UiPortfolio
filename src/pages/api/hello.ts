@@ -5,5 +5,5 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
 
   res.setHeader('Cache-Control', 's-maxage=5, stale-while-revalidate');
 
-  res.status(200).json({ name: 'John Doe' ,date})
+  res.status(200).json({ name: 'John Doe', date })
 }

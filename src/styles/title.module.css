@@ -1,9 +1,5 @@
 .title {
-  background: linear-gradient(
-    121.57deg,
-    #ffffff 18.77%,
-    rgba(124, 120, 120, 0.66) 40.15%
-  );
+  background: linear-gradient(121.57deg, #ffffff 18.77%, rgba(124, 120, 120, 0.66) 40.15%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
