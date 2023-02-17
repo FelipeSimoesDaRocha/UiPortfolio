@@ -5,11 +5,7 @@ import styles from "../styles/Header.module.css";
 
 const Header = () => {
   const [show, setShow] = useState(false);
-
   const handleShowMenu = () => setShow(!show);
-
-  const linkedin = "https://www.linkedin.com/in/felipe-sim%C3%B5es-da-rocha"
-  const github = "https://github.com/FelipeSimoesDaRocha"
 
   return (
     <header className={styles.header}>
@@ -52,7 +48,7 @@ const Header = () => {
       >
         <a
           className={styles.social_link}
-          href={github}
+          href={"https://github.com/FelipeSimoesDaRocha"}
           target="_blank"
           rel="noreferrer"
         >
@@ -70,7 +66,8 @@ const Header = () => {
         </a>
         <a
           className={styles.social_link}
-          href={linkedin}
+          href={"https://www.linkedin.com/in/felipe-sim%C3%B5es-da-rocha"
+          }
           target="_blank"
           rel="noreferrer"
         >

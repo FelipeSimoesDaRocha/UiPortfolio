@@ -9,7 +9,7 @@
 .photo {
   animation: moveToLeft 2s ease-in-out 1.3s;
   animation-fill-mode: backwards;
-  border-radius: 10% 10%;
+  border-radius: 0 0 36% 3%;
 }
 
 .image_socials {
@@ -52,6 +52,11 @@
   .photo {
     width: 300px;
     height: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .photo {
     border-radius: 10% 10%;
   }
 }
