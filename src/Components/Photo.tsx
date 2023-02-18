@@ -17,11 +17,6 @@ const Photo = () => {
       link: "https://www.linkedin.com/in/felipe-sim%C3%B5es-da-rocha",
     },
     {
-      name: "Discord",
-      color: "#7289da",
-      link: "https://discord.gg/YFpCswADvF",
-    },
-    {
       name: "Github",
       color: " #333",
       link: "https://github.com/FelipeSimoesDaRocha",

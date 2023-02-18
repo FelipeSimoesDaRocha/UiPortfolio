@@ -25,25 +25,19 @@ const Hero = () => {
                     Olá, eu sou <strong>Felipe!</strong>
                   </h2>
                   <TypeAnimation
-                    sequence={[
-                      "Desenvolvedor Front-end",
-                      1500,
-                      "Desenvolvedor UX",
-                      1500,
-                    ]}
+                    sequence={["Desenvolvedor Front-end", 1500, "Desenvolvedor UX", 1500,]}
                     wrapper="h2"
                     cursor={true}
                     repeat={Infinity}
                     className={styles.hero_sub_title}
                   />
-
                 </div>
-
-                <p className={styles.hero_paragrafo}>
-                  Minha paixão é sonhar com ideias e torná-las realidade com interfaces elegantes.
-                  Sempre em busca do proximo nivel.
-                </p>
-
+                <div className={`${styles.section_paragraph}` || `${styles.section_paragraph_intro}`}>
+                  <p className={styles.text_color_sec}>
+                    Minha paixão é sonhar com ideias e torná-las realidade com interfaces elegantes.
+                    <strong> Sempre em busca do proximo nivel.</strong>
+                  </p>
+                </div>
                 {/* <Link href="/projetos">
                   <a className={styles.hero_button}>Meus Projetos!</a>
                 </Link> */}

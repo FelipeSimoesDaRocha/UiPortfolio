@@ -1,5 +1,5 @@
 import styles from "../styles/Social_Button.module.css";
-import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 type props = {
   type?: string;
@@ -11,8 +11,6 @@ type props = {
 const Button = ({ text, color, link }: props) => {
   function returnIcon(icon: string) {
     switch (icon) {
-      case "Discord":
-        return <FaDiscord />;
       case "Linkedin":
         return <FaLinkedin />;
       case "Github":
