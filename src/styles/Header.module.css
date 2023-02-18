@@ -97,10 +97,6 @@
 }
 
 @media screen and (max-width: 850px) {
-  .nav {
-    display: flex;
-  }
-
   .logo {
     display: none;
   }
