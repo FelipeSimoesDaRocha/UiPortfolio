@@ -1,0 +1,39 @@
+.footer {
+    padding-bottom: 32px;
+    font-size: 14px;
+}
+.page_padding {
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.text_color_sec {
+    color: #687076;
+}
+
+.footer_links {
+    display: flex;
+    margin-right: -14px;
+    align-items: center;
+}
+
+.footer_link {
+    display: block;
+    padding: 8px 14px;
+}

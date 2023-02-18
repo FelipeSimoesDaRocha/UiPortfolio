@@ -1,15 +1,20 @@
+// Next
 import { NextPage } from "next";
+
+// Components
 import Header from "../Components/Header";
 import Hero from "../Components/Hero";
 import Separator from "../Components/Separator";
+import Footer from "../Components/Footer";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Header />
       <Hero />
       <Separator />
-    </div>
+      <Footer />
+    </>
   );
 };
 
