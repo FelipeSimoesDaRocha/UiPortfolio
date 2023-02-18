@@ -1,31 +1,59 @@
 @import "./Responsive/Header.css";
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
+.nav {
   position: fixed;
-  width: 100%;
-  z-index: 10;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  z-index: 100;
+  background-color: transparent;
+  transition: background-color 0.2s, color 0.2s;
   transition: all 1.2s ease;
 }
 
-.active {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
+.page_padding {
+  padding: 0 2rem;
+}
+
+.nav_active {
   position: fixed;
-  width: 100%;
-  background-color: #0000006c;
-  z-index: 10;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  z-index: 100;
+  background-color: hsla(0, 0%, 0%, 0.7);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
   transition: all 1.2s ease;
 }
 
-.div_span_portfolio {
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav_inner {
+  position: relative;
+  display: flex;
+  padding: 10px 6px 0;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(2, 23, 53, 0.027);
+  transition: border-color 0.2s;
+  align-items: self-start;
+}
+
+.logo {
   display: flex;
   align-items: center;
 }
-.span_portfolio {
+
+.logo_span {
   color: #fff;
   font-weight: bold;
   display: flex;
@@ -33,34 +61,34 @@
   font-size: 2rem;
 }
 
-.hamburger {
+.menu {
   display: none;
   color: white;
   font-size: 2rem;
   cursor: pointer;
 }
 
-.header_nav {
+.nav_link {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   color: rgba(255, 255, 255, 0.75);
   transition: height 1s ease-in-out;
 }
 
-.link_nav {
-  font-size: 2rem;
+.link {
+  font-size: 1.5rem;
   font-weight: bolder;
 }
 
-.link_nav:hover {
+.link:hover {
   color: #fff;
 }
 
 .nav_socials {
-  margin-right: 2rem;
   display: flex;
   gap: 2rem;
 }
+
 .social_link {
   transition: all 0.4s ease;
 }
@@ -69,26 +97,23 @@
 }
 
 @media screen and (max-width: 850px) {
-  .header {
+  .nav {
     display: flex;
   }
 
-  .div_span_portfolio {
+  .logo {
     display: none;
-    align-self: flex-start;
-    justify-content: space-between;
-    line-height: 100%;
   }
 
-  .hamburger {
+  .menu {
     display: block;
   }
 
-  .link_nav{
+  .link {
     display: none;
   }
 
-  .header_nav {
+  .nav_link {
     gap: 0.6rem;
     flex-direction: column;
     text-align: center;
