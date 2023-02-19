@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "../styles/Hero.module.css";
 import BackgroundAnimation from "./BgAnimation";
 import Photo from "./Photo";
@@ -17,14 +16,7 @@ const Hero = () => {
           <div className={styles.hero_ui_intro_inner}>
             <div className={styles.hero_intro_wrap}>
               <div className={styles.hero_intro_content}>
-                <div className={styles.hero_heading_ui_wrap}
-                  style={{
-                    willChange: "transform, opacity",
-                    transform: "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                    transformStyle: "preserve-3d",
-                    opacity: 1
-                  }}
-                >
+                <div className={styles.hero_heading_ui_wrap}>
                   <h2 className={styles.hero_title}>
                     {t("hero.label")} <strong>Felipe!</strong>
                   </h2>

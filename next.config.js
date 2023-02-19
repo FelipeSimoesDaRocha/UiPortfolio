@@ -3,7 +3,7 @@
 module.exports = nextConfig = {
   reactStrictMode: true,
   i18n: {
-    locales: ["en", "pt"],
-    defaultLocale: "pt"
+    locales: ["pt-BR", "en",],
+    defaultLocale: "pt-BR"
   },
 };;

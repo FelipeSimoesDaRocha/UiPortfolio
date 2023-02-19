@@ -5,17 +5,17 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 // Languages 
 import translationEN from "../public/locales/en/translation.json";
-import translationPT from "../public/locales/pt/translation.json";
+import translationPTBR from "../public/locales/pt/translation.json";
 
-const availableLanguages = ['en', 'pt'];
-const fallbackLng = ['en'];
+const availableLanguages = ["pt-br", "en"];
+const fallbackLng = ["en"];
 
 const resources = {
   en: {
     translation: translationEN,
   },
   pt: {
-    translation: translationPT,
+    translation: translationPTBR,
   },
 };
 

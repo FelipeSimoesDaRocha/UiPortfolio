@@ -8,9 +8,15 @@ const Footer = () => {
                     <div className={styles.footer_inner}>
                         <div>© 2023 Felipe Rocha. Todos os direitos reservados.</div>
                         <div className={styles.footer_links}>
-                            <a href={"Felipe,simoesdarocha@gmail.com"} className={styles.footer_link} children={"Contato"} target="_blank" aria-label="Contato" />
-                            <a href={"/privacy"} className={styles.footer_link} children={"Privacidade"} target="_blank" aria-label="Privacidade" />
-                            <a href={"/legal-notice"} className={styles.footer_link} children={"Legal notice"} target="_blank" aria-label="Noticia legal" />
+                            <a href={"Felipe,simoesdarocha@gmail.com"} className={styles.footer_link} target="_blank" aria-label="Contato" rel="noreferrer" >
+                                Contato
+                            </a>
+                            <a href={"/privacy"} className={styles.footer_link} target="_blank" aria-label="Privacidade" rel="noreferrer" >
+                                Privacidade
+                            </a>
+                            <a href={"/legal-notice"} className={styles.footer_link} target="_blank" aria-label="Noticia legal" rel="noreferrer" >
+                                Legal notice
+                            </a>
                         </div>
                     </div>
                 </div>

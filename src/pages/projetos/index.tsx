@@ -1,7 +1,7 @@
-import styles from "../styles/Projetcs-Section.module.css";
-import Project from "../Components/Project";
-import Header from "../Components/Header";
-import utils from "../styles/utils.module.css";
+import styles from "../../styles/Projetcs-Section.module.css";
+import Project from "../../Components/Project";
+import Header from "../../Components/Header";
+import utils from "../../styles/utils.module.css";
 import { GetStaticProps } from "next";
 
 type Repository = {
@@ -15,7 +15,6 @@ type Repository = {
 type HomeProps = {
   repositories: Repository[];
 };
-
 
 const ProjectsPage = ({ repositories }: HomeProps) => {
   return (
@@ -39,7 +38,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch('https://api.github.com/users/FelipeSimoesDaRocha/repos');
   const data = await response.json();
 
-  const repositories = data.map((repository: { name: any; description: any; }) => {
+  const repositories = data.map((repository: { name: string, description: string }) => {
     return {
       name: repository.name,
       description: repository.description,
