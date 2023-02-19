@@ -3,8 +3,12 @@ import styles from "../styles/Hero.module.css";
 import BackgroundAnimation from "./BgAnimation";
 import Photo from "./Photo";
 import { TypeAnimation } from "react-type-animation";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
+
   return (
     <main className={styles.hero_ui_intro}>
       <BackgroundAnimation />
@@ -22,7 +26,7 @@ const Hero = () => {
                   }}
                 >
                   <h2 className={styles.hero_title}>
-                    Olá, eu sou <strong>Felipe!</strong>
+                    {t("hero.label")} <strong>Felipe!</strong>
                   </h2>
                   <TypeAnimation
                     sequence={["Desenvolvedor Front-end", 1500, "Desenvolvedor UX", 1500,]}

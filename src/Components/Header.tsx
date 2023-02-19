@@ -25,7 +25,6 @@ const Header = () => {
       <div className={styles.page_padding}>
         <div className={styles.container}>
           <div className={styles.nav_inner}>
-
             <div className={styles.logo}>
               <Link className={styles.logo_span} Href="/">
                 <svg
