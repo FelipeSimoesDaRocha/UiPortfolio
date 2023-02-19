@@ -8,7 +8,7 @@ import translationEN from "../public/locales/en/translation.json";
 import translationPTBR from "../public/locales/pt/translation.json";
 
 const availableLanguages = ["pt-br", "en"];
-const fallbackLng = ["en"];
+const fallbackLng = ["pt-br"];
 
 const resources = {
   en: {
