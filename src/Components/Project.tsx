@@ -7,7 +7,6 @@ type ProjectType = {
   description: string;
 };
 
-
 const Project = ({ githubUrl, name, image, description }: ProjectType) => {
   return (
     <div className={styles.project_card}>

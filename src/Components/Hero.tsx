@@ -7,7 +7,6 @@ import { useTranslation } from "react-i18next";
 const Hero = () => {
   const { t } = useTranslation();
 
-
   return (
     <main className={styles.hero_ui_intro}>
       <BackgroundAnimation />
@@ -34,9 +33,6 @@ const Hero = () => {
                     <strong> Sempre em busca do proximo nivel.</strong>
                   </p>
                 </div>
-                {/* <Link href="/projetos">
-                  <a className={styles.hero_button}>Meus Projetos!</a>
-                </Link> */}
               </div>
               <div className={styles.intro_img_wrap}>
                 <Photo />

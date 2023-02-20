@@ -2,6 +2,11 @@
   "name": "felipe_portfolio",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Felipe simões da rocha",
+    "email": "felipe.simoesdarocha@gmail.com",
+    "url": "https://felipe-rocha.vercel.app/"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,7 +14,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@vercel/analytics": "^0.1.8",
+    "@vercel/analytics": "^0.1.10",
     "i18next": "^22.4.10",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-xhr-backend": "^3.2.2",
@@ -20,20 +25,20 @@
     "prettier": "^2.8.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
-    "react-dom": "18.1.0",
+    "react-dom": "^18.2.0",
     "react-i18next": "^12.1.5",
-    "react-icons": "^4.4.0"
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.1.6",
-    "@types/node": "17.0.41",
-    "@types/react": "18.0.12",
-    "@types/react-dom": "18.0.5",
+    "@types/node": "^18.14.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
-    "eslint": "^8.17.0",
-    "eslint-config-next": "12.1.6",
+    "eslint": "^8.34.0",
+    "eslint-config-next": "^13.1.6",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
