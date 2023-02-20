@@ -5,7 +5,8 @@ import { TypeAnimation } from "react-type-animation";
 import { useTranslation } from "react-i18next";
 
 const Hero = () => {
-  const { t, i18n } = useTranslation(["pt-BR", "en",]);
+
+  const { t, i18n } = useTranslation();
 
   return (
     <main className={styles.hero_ui_intro}>
@@ -17,7 +18,7 @@ const Hero = () => {
               <div className={styles.hero_intro_content}>
                 <div className={styles.hero_heading_ui_wrap}>
                   <h2 className={styles.hero_title}>
-                    {t("hero.label")} <strong>Felipe!</strong>
+                    {i18n.t("hero.label")} <strong>Felipe!</strong>
                   </h2>
                   <TypeAnimation
                     sequence={["Desenvolvedor Front-end", 1500, "Desenvolvedor UX", 1500,]}

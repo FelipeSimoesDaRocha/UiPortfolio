@@ -25,6 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="google-site-verification" content="1Vi5CDNpLH7dXyXdcGFFVBRNG5g7Rdk9_m7y9s0PszE" />
+        <link href="https://felipe-rocha.vercel.app/" rel="canonical" />
         <meta name='description' content='Portfólio de Felipe Simões Da Rocha' />
         <meta property="og:title" content="Felipe Rocha - Developer Front-End" />
         <meta property="og:image" content="" />

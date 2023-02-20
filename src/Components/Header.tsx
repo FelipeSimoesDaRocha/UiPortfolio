@@ -35,7 +35,7 @@ const Header = () => {
     }
   ];
 
-  const changeBackground = () => {
+  const handleChangeBackground = () => {
     if (window.scrollY >= 80) {
       setNavBar(true);
     } else {
@@ -44,8 +44,14 @@ const Header = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', changeBackground);
+    window.addEventListener('scroll', handleChangeBackground);
   }, []);
+
+  const handleChangeLng = (lng: string) => {
+    setLanguageSelected(lng);
+    i18n.changeLanguage(lng);
+    localStorage.setItem("language", lng);
+  }
 
   return (
     <header className={navbar ? `${styles.nav_active}` : `${styles.nav}`}>
@@ -87,23 +93,11 @@ const Header = () => {
             </div>
 
             <div className={styles.nav_socials}  >
-              <button
-                onClick={() => {
-                  setLanguageSelected("pt-BR");
-                  localStorage.setItem("language", "pt-BR");
-                  i18n.changeLanguage("pt-BR");
-                }}
-              >
+              <button onClick={() => handleChangeLng("pt-BR")} >
                 pt
               </button>
 
-              <button
-                onClick={() => {
-                  setLanguageSelected("en");
-                  localStorage.setItem("language", "en");
-                  i18n.changeLanguage("en");
-                }}
-              >
+              <button onClick={() => handleChangeLng("en-US")}>
                 usa
               </button>
             </div>

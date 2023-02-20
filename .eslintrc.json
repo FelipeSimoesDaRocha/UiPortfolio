@@ -12,7 +12,6 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
     "next"
   ],
   "overrides": [],
@@ -25,7 +24,6 @@
     "react",
     "react-hooks",
     "@typescript-eslint",
-    "prettier"
   ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
@@ -33,6 +31,5 @@
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "prettier/prettier": "error"
   }
 }
