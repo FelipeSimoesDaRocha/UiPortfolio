@@ -7,8 +7,8 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import translationEN from "../public/locales/en/translation.json";
 import translationPTBR from "../public/locales/pt/translation.json";
 
-const availableLanguages = ["pt-br", "en"];
-const fallbackLng = ["pt-br"];
+const availableLanguages = ["pt-BR", "en"];
+const fallbackLng = ["pt-BR"];
 
 const resources = {
   en: {

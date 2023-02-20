@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 import { useTranslation } from "react-i18next";
 
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation(["pt-BR", "en",]);
 
   return (
     <main className={styles.hero_ui_intro}>
