@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import { useEffect } from 'react';
 
 // Styles
-import '../styles/globals.css'
+import GlobalStyle from '../styles/globals';
 
 // Translate
 import '../i18nextInit';
@@ -33,6 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property='og:Github' content='https://github.com/FelipeSimoesDaRocha' />
         <meta property='og:Linkedin' content='https://www.linkedin.com/in/felipe-sim%C3%B5es-da-rocha/' />
       </Head>
+      <GlobalStyle />
       <Component {...pageProps} />
       <Analytics />
     </>

@@ -1,3 +1,7 @@
+
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
 @import "Fonts/Spaece-Grotesk.css";
 
 html,
@@ -50,3 +54,6 @@ a {
   background: -webkit-gradient(transparent, #113188);
   background: linear-gradient(transparent, #390faa);
 }
+`
+
+export default GlobalStyle
