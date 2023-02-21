@@ -58,14 +58,12 @@
   max-width: 490px;
   letter-spacing: 0.01em;
   font-size: 1.5rem;
-
 }
 
 .text_color_sec {
   color: rgba(255, 255, 255, 0.5);
   line-height: 2.5rem;
   animation: moveToLeft 1s ease-in-out;
-  
 }
 
 .text_color_sec strong {

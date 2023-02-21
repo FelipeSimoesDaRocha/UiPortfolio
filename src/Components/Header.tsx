@@ -8,6 +8,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 // Translate
 import { useTranslation } from "react-i18next";
 import Link from "./Link";
+import { Select } from "antd";
 
 interface NavigationItemsProps {
   name: string;
@@ -93,13 +94,15 @@ const Header = () => {
             </div>
 
             <div className={styles.nav_socials}  >
-              <button onClick={() => handleChangeLng("pt")} >
-                pt
-              </button>
-
-              <button onClick={() => handleChangeLng("en")}>
-                usa
-              </button>
+              <Select
+                value={languageSelected}
+                defaultValue={languageSelected}
+                dropdownStyle={{ textTransform: "uppercase", textAlign: "center", color: "#fff", backgroundColor: "transparent" }}
+                style={{ width: 54 }}
+                onChange={handleChangeLng} options={[
+                  { value: "pt", name: "pt" },
+                  { value: "en", name: "en" },
+                ]} />
             </div>
           </div>
         </div>
