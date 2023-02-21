@@ -35,7 +35,7 @@ const ProjectsPage = ({ repositories }: HomeProps) => {
 export default ProjectsPage;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await fetch('https://api.github.com/users/FelipeSimoesDaRocha/repos');
+  const response = await fetch("https://api.github.com/users/FelipeSimoesDaRocha/repos");
   const data = await response.json();
 
   const repositories = data.map((repository: { name: string, description: string }) => {

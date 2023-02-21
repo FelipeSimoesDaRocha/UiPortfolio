@@ -1,21 +1,21 @@
 // Next
-import type { AppProps } from 'next/app'
-import { useEffect } from 'react';
+import Head from "next/head";
+import type { AppProps } from "next/app";
+import { useEffect } from "react";
 
 // Styles
-import GlobalStyle from '../styles/globals';
+import "../styles/globals.css"
 
 // Translate
-import '../i18nextInit';
+import "../i18nextInit";
 
 // Vercel-Analytics
-import { Analytics } from '@vercel/analytics/react';
-import Head from 'next/head';
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    if (!localStorage.getItem("language")) {
-      localStorage.setItem("language", "pt-BR");
+    if (localStorage.i18nextLng) {
+      localStorage.setItem("i18nextLng", "pt");
     }
   }, []);
 
@@ -26,14 +26,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="google-site-verification" content="1Vi5CDNpLH7dXyXdcGFFVBRNG5g7Rdk9_m7y9s0PszE" />
         <link href="https://felipe-rocha.vercel.app/" rel="canonical" />
-        <meta name='description' content='Portfólio de Felipe Simões Da Rocha' />
+        <meta name="description" content="Portfólio de Felipe Simões Da Rocha"/>
         <meta property="og:title" content="Felipe Rocha - Developer Front-End" />
         <meta property="og:image" content="" />
         <meta property="og:type" content="website" />
-        <meta property='og:Github' content='https://github.com/FelipeSimoesDaRocha' />
-        <meta property='og:Linkedin' content='https://www.linkedin.com/in/felipe-sim%C3%B5es-da-rocha/' />
+        <meta property="og:Github" content="https://github.com/FelipeSimoesDaRocha" />
+        <meta property="og:Linkedin" content="https://www.linkedin.com/in/felipe-sim%C3%B5es-da-rocha/" />
       </Head>
-      <GlobalStyle />
       <Component {...pageProps} />
       <Analytics />
     </>

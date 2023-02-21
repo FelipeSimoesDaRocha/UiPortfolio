@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
 
 module.exports = nextConfig = {
   reactStrictMode: true,
@@ -6,7 +6,7 @@ module.exports = nextConfig = {
     styledComponents: true,
   },
   i18n: {
-    locales: ["pt-BR", "en",],
-    defaultLocale: "pt-BR"
+    defaultLocale: "pt",
+    locales: ["pt", "en",]
   },
 };;

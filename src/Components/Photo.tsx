@@ -1,7 +1,7 @@
 import Image from "next/image";
 import style from "../styles/Photo.module.css";
 import Button from "./SocialButton";
-import Img from '../../public/assets/photo.png'
+import Img from "../../public/assets/photo.png"
 
 type Socials = {
   name: string;
@@ -32,7 +32,7 @@ const Photo = () => {
           className={style.photo}
           width={500}
           height={624}
-          objectFit='contain'
+          objectFit="contain"
         />
       </div>
 

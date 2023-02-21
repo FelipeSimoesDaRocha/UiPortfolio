@@ -9,7 +9,7 @@ const Hero = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <main className={styles.hero_ui_intro}>
+    <main className={styles.hero_ui_intro} key="lang-select">
       <BackgroundAnimation />
       <div className={styles.page_padding}>
         <div className={styles.container}>

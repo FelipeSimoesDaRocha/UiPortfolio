@@ -21,7 +21,7 @@ const Header = () => {
   const [navbar, setNavBar] = useState(false);
   const { i18n } = useTranslation();
 
-  const [languageSelected, setLanguageSelected] = useState("pt-BR");
+  const [languageSelected, setLanguageSelected] = useState("")
   const navigationsItems: NavigationItemsProps[] = [
     {
       name: "Projetos",
@@ -44,13 +44,13 @@ const Header = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleChangeBackground);
+    window.addEventListener("scroll", handleChangeBackground);
   }, []);
 
   const handleChangeLng = (lng: string) => {
     setLanguageSelected(lng);
     i18n.changeLanguage(lng);
-    localStorage.setItem("language", lng);
+    localStorage.setItem("i18nextLng", lng);
   }
 
   return (
@@ -93,11 +93,11 @@ const Header = () => {
             </div>
 
             <div className={styles.nav_socials}  >
-              <button onClick={() => handleChangeLng("pt-BR")} >
+              <button onClick={() => handleChangeLng("pt")} >
                 pt
               </button>
 
-              <button onClick={() => handleChangeLng("en-US")}>
+              <button onClick={() => handleChangeLng("en")}>
                 usa
               </button>
             </div>
