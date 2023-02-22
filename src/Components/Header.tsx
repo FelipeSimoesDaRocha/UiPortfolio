@@ -96,9 +96,9 @@ const Header = () => {
             </div>
 
             <div className={styles.nav_lang}  >
-              <a className={styles.link_lang} onClick={() => setModalLang(true)} aria-label="Seleção de idioma">
+              <span className={styles.link_lang} onClick={() => setModalLang(true)} aria-label="Seleção de idioma">
                 <FaGlobeAmericas />
-              </a>
+              </span>
 
               {!modalLang ? (
                 <></>
