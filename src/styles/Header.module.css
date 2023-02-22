@@ -1,5 +1,3 @@
-@import "./Responsive/Header.css";
-
 .nav {
   position: fixed;
   left: 0;
@@ -10,10 +8,6 @@
   background-color: transparent;
   transition: background-color 0.2s, color 0.2s;
   transition: all 1.2s ease;
-}
-
-.page_padding {
-  padding: 0 2rem;
 }
 
 .nav_active {
@@ -29,6 +23,10 @@
   -webkit-transition: background-color 0.2s, color 0.2s;
   transition: background-color 0.2s, color 0.2s;
   transition: all 1.2s ease;
+}
+
+.page_padding {
+  padding: 0 2rem;
 }
 
 .container {
@@ -53,12 +51,16 @@
   align-items: center;
 }
 
-.logo_span {
-  color: #fff;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
+.logo p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
   font-size: 2rem;
+}
+
+.logo p:hover {
+  color: #fff;
+  transition: all 1s ease;
+  cursor: pointer;
 }
 
 .menu {
@@ -71,58 +73,60 @@
 .nav_link {
   display: flex;
   gap: 1.5rem;
+}
+
+.nav_link a {
   color: rgba(255, 255, 255, 0.75);
-  transition: height 1s ease-in-out;
-}
-
-.link {
   font-size: 1.5rem;
-  font-weight: bolder;
 }
 
-.link:hover {
+.nav_link a:hover {
   color: #fff;
+  transition: all 1s ease;
 }
 
-.nav_socials {
-  margin-top: 5px;
+.nav_lang {
   cursor: pointer;
+  display: flex;
 }
 
-.nav_socials svg {
-  transition: all 0.4s ease;
-  width: 100px;
+.link_lang svg {
+  fill: #fff;
+  height: 2em;
+  width: 2em;
 }
 
-.nav_socials svg :hover {
+.link_lang svg :hover {
   fill: #333;
-  transition: all 0.4s ease;
-}
-
-.nav_socials ul {
-  padding: 0;
+  transition: fill 0.5s ease;
 }
 
 .lang {
-  list-style: none;
-  float: left;
-  margin: 0;
   position: absolute;
   top: 60px;
-  right: 30px;
+  right: -8px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .lang li {
+  list-style: none;
+  float: left;
   display: flex;
   flex-direction: column;
-  width: 50px;
+  width: 60px;
+  border-radius: 10%;
 }
 
 .lang button {
-  background: #bebebe45;
+  background: #f3dede45;
   border: none;
   color: #fff;
   font-weight: 600;
+  border-radius: 10%;
 }
 
 .lang li button:hover {
@@ -131,42 +135,16 @@
   cursor: pointer;
 }
 
-.social_link {
-  transition: all 0.4s ease;
-}
-.social_link:hover {
-  transform: scaleX(1.4) scaleY(1.4);
-}
-
 @media screen and (max-width: 850px) {
   .logo {
     display: none;
   }
 
-  .menu {
-    display: block;
-  }
-
-  .link {
+  .nav_link {
     display: none;
   }
 
-  .nav_link {
-    gap: 0.6rem;
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 1rem;
-    height: 0;
-    overflow: hidden;
-  }
-
-  .nav_socials {
-    margin-right: 0rem;
-    justify-content: center;
-    height: 0;
-  }
-
-  .ant-select-selection {
-    background-color: transparent;
+  .menu {
+    display: block;
   }
 }

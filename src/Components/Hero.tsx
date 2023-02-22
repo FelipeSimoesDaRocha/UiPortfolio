@@ -1,12 +1,36 @@
 import styles from "../styles/Hero.module.css";
+
 import BackgroundAnimation from "./BgAnimation";
-import Photo from "./Photo";
 import { TypeAnimation } from "react-type-animation";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
+import Img from "../../public/assets/photo.png"
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Button } from "antd";
+
+type Socials = {
+  name: string;
+  color: string;
+  link: string;
+};
 
 const Hero = () => {
-
   const { t, i18n } = useTranslation();
+
+  const TypesSocials = [
+    {
+      name: "Linkedin",
+      color: "#0077b5",
+      icon: <FaLinkedin />,
+      link: "https://www.linkedin.com/in/felipe-sim%C3%B5es-da-rocha",
+    },
+    {
+      name: "Github",
+      color: " #333",
+      icon: <FaGithub />,
+      link: "https://github.com/FelipeSimoesDaRocha",
+    },
+  ] as unknown as Socials[];
 
   return (
     <main className={styles.hero_ui_intro} key="lang-select">
@@ -36,7 +60,26 @@ const Hero = () => {
                 </div>
               </div>
               <div className={styles.intro_img_wrap}>
-                <Photo />
+                <aside className={styles.photo_aside}>
+                  <div className={styles.photo}>
+                    <Image
+                      src={Img}
+                      alt="Imagem de Felipe Rocha"
+                      className={styles.photo}
+                      width={500}
+                      height={624}
+                      objectFit="contain"
+                    />
+                  </div>
+
+                  <div className={styles.image_socials}>
+                    {TypesSocials.map(({ name, color, link }, index) => (
+                      <Button key={index} name={name} color={color} href={link} >
+                        {name}
+                      </Button>
+                    ))}
+                  </div>
+                </aside>
               </div>
             </div>
           </div>
