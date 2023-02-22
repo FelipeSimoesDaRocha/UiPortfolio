@@ -97,18 +97,18 @@ const Header = () => {
             </div>
 
             <div className={styles.nav_socials}  >
-              <a onClick={() => setModalLang(true)}>
+              <span onClick={() => setModalLang(true)}>
                 <FaGlobeAmericas size={30} color="#fff" />
-              </a>
+              </span>
 
               {!modalLang ? (
                 <></>
               ) : (<ul className={styles.lang}>
                 <li className={styles.lista}>
-                  <a onClick={() => handleChangeLng("pt")} aria-label="Seleção de idioma" > PT</a>
+                  <button onClick={() => handleChangeLng("pt")} aria-label="Seleção de idioma"> PT</button>
                 </li>
                 <li className={styles.lista}>
-                  <a onClick={() => handleChangeLng("en")} aria-label="Seleção de idioma">EN</a>
+                  <button onClick={() => handleChangeLng("en")} aria-label="Seleção de idioma" >EN</button>
                 </li>
               </ul>)
               }
