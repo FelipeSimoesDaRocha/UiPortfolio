@@ -6,6 +6,7 @@ body {
   margin: 0;
   background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);  
   font-family: "Space Grotesk", sans-serif;
+  font-display: "swap";
   -webkit-font-smoothing: subpixel-antialiased;
   font-feature-settings: "case" 1, "cpsp" 1, "dlig" 1, "cv01" 1, "cv02", "cv03" 1, "cv04" 1;
   font-variation-settings: "wght" 450;
