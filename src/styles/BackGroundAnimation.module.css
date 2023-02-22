@@ -3,4 +3,6 @@
   width: 80%;
   height: 8rem;
   left: 15%;
+  mix-blend-mode: color-dodge;
+  filter: blur(3px);
 }
