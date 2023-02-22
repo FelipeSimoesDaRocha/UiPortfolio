@@ -29,6 +29,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <meta name="google-site-verification" content="1Vi5CDNpLH7dXyXdcGFFVBRNG5g7Rdk9_m7y9s0PszE" />
+        X-XSS-Protection: 1; mode=block
+        
         <meta name="description" content="Portfólio de Felipe Simões Da Rocha" />
 
         <link rel="apple-touch-icon" sizes="180x180" href="../../public/icons/apple-touch-icon.png" />
