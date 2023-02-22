@@ -11,6 +11,7 @@ import "../i18nextInit";
 
 // Vercel-Analytics
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -40,7 +41,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:image" content="" />
         <meta property="og:Github" content="https://github.com/FelipeSimoesDaRocha" />
         <meta property="og:Linkedin" content="https://www.linkedin.com/in/felipe-sim%C3%B5es-da-rocha/" />
-        <script
+      </Head>
+      <Component {...pageProps} />
+      <Script
         data-name="BMC-Widget"
         data-cfasync="false"
         src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
@@ -51,9 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         data-position="Right"
         data-x_margin="18"
         data-y_margin="18">
-      </script>
-      </Head>
-      <Component {...pageProps} />
+      </Script>
       <Analytics />
     </>
   )
