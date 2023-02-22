@@ -28,16 +28,16 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#646464" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta name="google-site-verification" content="1Vi5CDNpLH7dXyXdcGFFVBRNG5g7Rdk9_m7y9s0PszE" />
         X-XSS-Protection: 1; mode=block
-        
-        <meta name="description" content="Portfólio de Felipe Simões Da Rocha" />
+        <meta name="robots" content="follow,index" />
+        <meta name="google-site-verification" content="1Vi5CDNpLH7dXyXdcGFFVBRNG5g7Rdk9_m7y9s0PszE" />
 
         <link rel="apple-touch-icon" sizes="180x180" href="../../public/icons/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="../../public/icons/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="../../public/icons/favicon-16x16.png" />
-        <link href="https://felipe-rocha.vercel.app/" rel="canonical" />
+        <link rel="canonical" href="https://felipe-rocha.vercel.app/" />
 
+        <meta name="description" content="Portfólio de Felipe Simões Da Rocha" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Felipe Rocha - Developer Front-End" />
         <meta property="og:image" content="" />
