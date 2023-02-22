@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="google-site-verification" content="1Vi5CDNpLH7dXyXdcGFFVBRNG5g7Rdk9_m7y9s0PszE" />
 
         <meta name="browserconfig" content="browserconfig.xml" />
-        <link rel="manifest" href="manifest.json" />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="canonical" href="https://felipe-rocha.vercel.app/" />
         <link rel="shortcut icon" href="favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
