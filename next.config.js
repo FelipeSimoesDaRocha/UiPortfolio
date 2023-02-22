@@ -6,4 +6,11 @@ module.exports = nextConfig = {
     defaultLocale: "pt",
     locales: ["pt", "en",]
   },
+  react: {
+    useSuspense: false,
+  },
+  pwa: {
+    dest: "public",
+
+  },
 };;

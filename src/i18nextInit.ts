@@ -24,6 +24,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
+    lng: "pt",
     fallbackLng: "pt",
     // defaultNS: 'translations',
     // keySeparator: false,

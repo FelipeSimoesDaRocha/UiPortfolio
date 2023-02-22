@@ -23,26 +23,28 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <meta charSet="utf-8" />
         <title>Felipe Rocha</title>
-        <meta name="theme-color" content="#646464" />
+        <meta charSet="utf-8" />
+        <meta name="theme-color" content="#317EFB"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        X-XSS-Protection: 1; mode=block
-        <meta name="robots" content="follow,index" />
-        <meta name="google-site-verification" content="1Vi5CDNpLH7dXyXdcGFFVBRNG5g7Rdk9_m7y9s0PszE" />
-
-        <link rel="apple-touch-icon" sizes="180x180" href="../../public/icons/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="../../public/icons/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="../../public/icons/favicon-16x16.png" />
-        <link rel="canonical" href="https://felipe-rocha.vercel.app/" />
-
         <meta name="description" content="Portfólio de Felipe Simões Da Rocha" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Felipe Rocha - Developer Front-End" />
         <meta property="og:image" content="" />
         <meta property="og:Github" content="https://github.com/FelipeSimoesDaRocha" />
         <meta property="og:Linkedin" content="https://www.linkedin.com/in/felipe-sim%C3%B5es-da-rocha/" />
+
+        X-XSS-Protection: 1; mode=block
+        <meta name="robots" content="follow,index" />
+        <meta name="google-site-verification" content="1Vi5CDNpLH7dXyXdcGFFVBRNG5g7Rdk9_m7y9s0PszE" />
+        
+        <meta name="browserconfig" content="/browserconfig.xml" />
+        <link rel="manifest" href="./manifest.json" />
+        <link rel="canonical" href="https://felipe-rocha.vercel.app/" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       </Head>
       <Component {...pageProps} />
       <Script
