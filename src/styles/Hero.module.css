@@ -1,6 +1,5 @@
 .hero_ui_intro {
   position: static;
-  padding-top: 132px;
   padding-bottom: 152px;
   text-align: center;
 }
@@ -23,6 +22,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
+  padding-top: 136px;
 }
 
 .hero_intro_wrap {

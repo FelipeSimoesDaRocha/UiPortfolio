@@ -8,7 +8,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 // Translate
 import { useTranslation } from "react-i18next";
 import Link from "./Link";
-import { Select } from "antd";
+import { FaGlobeAmericas } from "react-icons/fa";
 
 interface NavigationItemsProps {
   name: string;
@@ -20,6 +20,8 @@ const Header = () => {
   const [show, setShow] = useState(false);
   const handleShowMenu = () => setShow(!show);
   const [navbar, setNavBar] = useState(false);
+  const [modalLang, setModalLang] = useState(false);
+
   const { i18n } = useTranslation();
 
   const [languageSelected, setLanguageSelected] = useState("")
@@ -52,6 +54,7 @@ const Header = () => {
     setLanguageSelected(lng);
     i18n.changeLanguage(lng);
     localStorage.setItem("i18nextLng", lng);
+    setModalLang(false)
   }
 
   return (
@@ -94,15 +97,21 @@ const Header = () => {
             </div>
 
             <div className={styles.nav_socials}  >
-              <Select
-                value={languageSelected}
-                defaultValue={languageSelected}
-                dropdownStyle={{ textTransform: "uppercase", textAlign: "center", color: "#fff", backgroundColor: "transparent" }}
-                style={{ width: 54 }}
-                onChange={handleChangeLng} options={[
-                  { value: "pt", name: "pt" },
-                  { value: "en", name: "en" },
-                ]} />
+              <a onClick={() => setModalLang(true)}>
+                <FaGlobeAmericas size={30} color="#fff" />
+              </a>
+
+              {!modalLang ? (
+                <></>
+              ) : (<ul className={styles.lang}>
+                <li className={styles.lista}>
+                  <a onClick={() => handleChangeLng("pt")} aria-label="Seleção de idioma" > PT</a>
+                </li>
+                <li className={styles.lista}>
+                  <a onClick={() => handleChangeLng("en")} aria-label="Seleção de idioma">EN</a>
+                </li>
+              </ul>)
+              }
             </div>
           </div>
         </div>

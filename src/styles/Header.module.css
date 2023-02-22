@@ -85,8 +85,46 @@
 }
 
 .nav_socials {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.nav_socials svg {
+  transition: all 0.4s ease;
+  width: 100px;
+}
+
+.nav_socials svg :hover {
+  fill: #333;
+  transition: all 0.4s ease;
+}
+
+.nav_socials ul {
+  padding: 0;
+  text-align: center;
+}
+
+.lang {
+  list-style: none;
+  float: left;
+  margin: 0;
+  position: absolute;
+  top: 60px;
+  right: 30px;
+}
+
+.lang li {
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  width: 50px;
+  color: #fff;
+  text-align: center;
+}
+
+.lang li a:hover {
+  background: #333;
+  text-shadow: 0px 0px 5px #fff;
+  cursor: pointer;
 }
 
 .social_link {
