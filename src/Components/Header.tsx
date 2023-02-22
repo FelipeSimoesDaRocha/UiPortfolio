@@ -97,7 +97,7 @@ const Header = () => {
             </div>
 
             <div className={styles.nav_socials}  >
-              <span onClick={() => setModalLang(true)} aria-label="Seleção de idioma">
+              <span onClick={() => setModalLang(true)} role="Seleção de idioma">
                 <FaGlobeAmericas size={30} color="#fff" />
               </span>
 
