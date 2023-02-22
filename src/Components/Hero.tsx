@@ -12,6 +12,7 @@ type Socials = {
   name: string;
   color: string;
   link: string;
+  className: string;
 };
 
 const Hero = () => {
@@ -23,12 +24,14 @@ const Hero = () => {
       color: "#0077b5",
       icon: <FaLinkedin />,
       link: "https://www.linkedin.com/in/felipe-sim%C3%B5es-da-rocha",
+      className: styles.linkedin
     },
     {
       name: "Github",
       color: " #333",
       icon: <FaGithub />,
       link: "https://github.com/FelipeSimoesDaRocha",
+      className: styles.github
     },
   ] as unknown as Socials[];
 
@@ -72,9 +75,9 @@ const Hero = () => {
                     />
                   </div>
 
-                  <div className={styles.image_socials}>
-                    {TypesSocials.map(({ name, color, link }, index) => (
-                      <Button key={index} name={name} color={color} href={link} >
+                  <div className={styles.social_btn}>
+                    {TypesSocials.map(({ name, color, link, className }, index) => (
+                      <Button key={index} name={name} color={color} href={link} className={className} target="blank">
                         {name}
                       </Button>
                     ))}
