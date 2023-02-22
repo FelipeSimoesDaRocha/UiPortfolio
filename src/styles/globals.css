@@ -4,7 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #646464;
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);  
   font-family: "Space Grotesk", sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
   font-feature-settings: "case" 1, "cpsp" 1, "dlig" 1, "cv01" 1, "cv02", "cv03" 1, "cv04" 1;
