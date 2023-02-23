@@ -51,18 +51,6 @@
   align-items: center;
 }
 
-.logo p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 2rem;
-}
-
-.logo p:hover {
-  color: #fff;
-  transition: all 1s ease;
-  cursor: pointer;
-}
-
 .menu {
   display: none;
   color: white;

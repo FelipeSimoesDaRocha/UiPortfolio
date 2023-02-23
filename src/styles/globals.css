@@ -4,7 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);  
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   font-family: "Space Grotesk", sans-serif;
   font-display: "swap";
   -webkit-font-smoothing: subpixel-antialiased;
@@ -13,6 +13,7 @@ body {
   font-variant: common-ligatures contextual;
   letter-spacing: -0.02em;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 a {
