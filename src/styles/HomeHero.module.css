@@ -1,6 +1,6 @@
 .hero_ui_intro {
   position: static;
-  padding-bottom: 152px;
+  padding-bottom: 50px;
   text-align: center;
 }
 
@@ -29,8 +29,6 @@
   display: grid;
   align-items: center;
   grid-auto-columns: 1fr;
-  grid-column-gap: 64px;
-  grid-row-gap: 16px;
   grid-template-columns: 1.2fr 1fr;
   grid-template-rows: auto;
 }
@@ -63,7 +61,7 @@
 .text_color_sec {
   color: rgba(255, 255, 255, 0.5);
   line-height: 2.5rem;
-  animation: moveToLeft 1s ease-in-out;
+  /* animation: moveToLeft 1s ease-in-out; */
 }
 
 .text_color_sec strong {
@@ -76,7 +74,7 @@
   margin: 0;
   color: #fff;
   font-size: 3.5rem;
-  animation: moveToRight 1s ease-in-out;
+  /* animation: moveToRight 1s ease-in-out; */
 }
 
 .hero_title strong {
@@ -90,8 +88,8 @@
 .social_btn {
   display: flex;
   gap: 8px;
-  animation: moveUp 400ms ease-in-out 1.4s;
-  animation-fill-mode: backwards;
+  /* animation: moveUp 400ms ease-in-out 1.4s; */
+  /* animation-fill-mode: backwards; */
 }
 
 .social_btn a {
@@ -119,6 +117,36 @@
   text-shadow: 0px 0px 5px #ffffff50;
   transition: all 1.2s ease;
   transform: scale(1.1) translate(0);
+}
+
+.intro_img_wrap {
+  position: relative;
+  display: grid;
+  width: 100%;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-areas: "Area";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  clip-path: inset(-1000px -1000px 1px -1000px) !important;
+
+}
+
+
+
+.photo_aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.photo {
+  animation: moveToLeft 600ms ease-in-out 600ms;
+  animation-fill-mode: backwards;
+  border-radius: 10% 10%;
 }
 
 @keyframes moveToRight {
@@ -206,10 +234,16 @@
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 991px) {
   .hero_ui_intro_inner {
     height: auto;
   }
+
+  .intro_img_wrap {
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+}
 }
 
 @media screen and (max-width: 1250px) {
@@ -217,20 +251,6 @@
     grid-row-gap: 80px;
     grid-template-columns: 1fr;
   }
-}
-
-.photo_aside {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.photo {
-  animation: moveToLeft 600ms ease-in-out 600ms;
-  animation-fill-mode: backwards;
-  border-radius: 10% 10%;
 }
 
 @keyframes moveToLeft {
@@ -263,6 +283,6 @@
   }
 
   .photo {
-    width: 300px;
+    width: 370px;
   }
 }

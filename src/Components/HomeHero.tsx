@@ -43,6 +43,7 @@ const HomeHero = () => {
         <div className={styles.container}>
           <div className={styles.hero_ui_intro_inner}>
             <div className={styles.hero_intro_wrap}>
+
               <div className={styles.hero_intro_content}>
                 <div className={styles.hero_heading_ui_wrap}>
                   <h2 className={styles.hero_title}>
@@ -63,7 +64,8 @@ const HomeHero = () => {
                   </p>
                 </div>
               </div>
-              <div className={styles.intro_img_wrap}>
+
+              <div className={styles.intro_img_wrap} style={{ willChange: "opacity", opacity: 1 }}>
                 <aside className={styles.photo_aside}>
                   <div className={styles.photo}>
                     <Image
@@ -85,11 +87,12 @@ const HomeHero = () => {
                   </div>
                 </aside>
               </div>
+
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

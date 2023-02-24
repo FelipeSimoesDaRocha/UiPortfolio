@@ -1,7 +1,8 @@
 .section {
     padding-bottom: 140px;
-    padding-top: 140px;
+    padding-top: 50px;
     background-color: #fff;
+
 }
 
 .page_padding {
@@ -27,9 +28,9 @@
 }
 
 .section_header h2 {
-    color: #fff;
-    margin: 0;
-    font-size: 2.5em !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 62px;
     line-height: 1.1;
     font-weight: 500;
     letter-spacing: -0.03em;
@@ -242,12 +243,12 @@
 @media screen and (max-width: 991px) {
     .section {
         padding-bottom: 140px;
-        padding-top: 0;
+        padding-top: 140;
     }
 
     .section_header {
         max-width: 480px;
-        margin-bottom: 120px;
+        margin-bottom: 70px;
     }
 
     .projects_list {
@@ -258,5 +259,11 @@
 
     .project_list_item_container {
         transition: border-radius 0.5s;
+    }
+
+    .section_header h2 {
+        font-size: 2.5em;
+        font-weight: 500;
+        letter-spacing: -0.03em;
     }
 }
