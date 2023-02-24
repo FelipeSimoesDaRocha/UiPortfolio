@@ -10,3 +10,11 @@ export type LinkItemsProps = {
     route: string;
     enName: string;
 }
+
+export type Project = {
+    background: string;
+    imgUrl: string;
+    video: string;
+    linkGit: string;
+    linkProdution: string
+};

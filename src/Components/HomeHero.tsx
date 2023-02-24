@@ -6,7 +6,6 @@ import styles from "../styles/HomeHero.module.css";
 
 // Antd
 import { Button } from "antd";
-
 // Animation
 import { TypeAnimation } from "react-type-animation";
 
@@ -43,11 +42,10 @@ const HomeHero = () => {
       <BackgroundAnimation />
       <div className={styles.page_padding}>
         <div className={styles.container}>
-          <div className={styles.hero_ui_intro_inner}>
-            <div className={styles.hero_intro_wrap}>
-
-              <div className={styles.hero_intro_content}>
-                <div className={styles.hero_heading_ui_wrap}>
+          <div className={styles.ui_intro_inner}>
+            <div className={styles.intro_wrap}>
+              <div className={styles.intro_content}>
+                <div className={styles.heading_ui_wrap}>
                   <h2 className={styles.hero_title}>
                     {i18n.t("hero.label")} <strong>Felipe!</strong>
                   </h2>

@@ -1,5 +1,6 @@
 {
     "hero": {
+        "Hello": "Olá",
         "label": "Olá, eu sou"
     }
 }

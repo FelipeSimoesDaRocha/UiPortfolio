@@ -2,13 +2,9 @@ import styles from "../styles/Work.module.css";
 import Image from "next/image";
 import img from "../../public/assets/img.png"
 
-type Socials = {
-    background: string;
-    imgUrl: string;
-    video: string;
-    linkGit: string;
-    linkProdution: string
-};
+// Models
+import { Project } from "../models";
+
 
 const Work = () => {
     const project = [
@@ -40,7 +36,7 @@ const Work = () => {
             linkGit: "",
             linkProdution: "",
         }
-    ] as unknown as Socials[];
+    ] as unknown as Project[];
 
     return (
         <section id="work" className={styles.section}>

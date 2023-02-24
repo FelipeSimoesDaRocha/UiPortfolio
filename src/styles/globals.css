@@ -1,6 +1,20 @@
 @import "Fonts/Spaece-Grotesk.css";
 
-* {
+:root {
+  --ff-body: "Space Grotesk", sans-serif;
+  --fs-xl: clamp(1.5rem, 3vw + 1rem, 3rem);
+  --fs-600: 2rem;
+}
+
+@media (min-width: 40em) {
+  :root {
+    --fs-400: 1rem;
+  }
+}
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,8 +22,9 @@
 
 html,
 body {
+  font-size: var(--fs-400);
   font-display: "swap";
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--ff-body);
   font-variation-settings: "wght" 450;
   font-variant: common-ligatures contextual;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -21,11 +36,30 @@ body {
   background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
 }
 
+body,
+h1,
+h2,
+h3,
+p,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.75);
 }
+
+blockquote::before {
+  content: open-quote;
+}
+
+blockquote::after {
+  content: close-quote;
+}
+
 
 @media screen and (min-device-pixel-ratio: 1.5), screen and (min-resolution: 1.5dppx) {
   body {
