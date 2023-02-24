@@ -1,25 +1,27 @@
-import styles from "../styles/HomeHero.module.css";
-
-import BackgroundAnimation from "./BgAnimation";
-import { TypeAnimation } from "react-type-animation";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
-import Img from "../../public/assets/photo.png"
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+// Styles
+import styles from "../styles/HomeHero.module.css";
+
+// Antd
 import { Button } from "antd";
 
-type Socials = {
-  name: string;
-  color: string;
-  link: string;
-  className: string;
-};
+// Animation
+import { TypeAnimation } from "react-type-animation";
+
+// Models
+import { SocialButton } from "../models";
+
+import BackgroundAnimation from "./svg/BgAnimation";
+import Img from "../../public/assets/photo.png"
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 
 const HomeHero = () => {
   const { t, i18n } = useTranslation();
 
-  const TypesSocials = [
+  const SocialButtons = [
     {
       name: "Linkedin",
       color: "#0077b5",
@@ -34,7 +36,7 @@ const HomeHero = () => {
       link: "https://github.com/FelipeSimoesDaRocha",
       className: styles.github
     },
-  ] as unknown as Socials[];
+  ] as unknown as SocialButton[];
 
   return (
     <section id="home" className={styles.hero_ui_intro} key="lang-select" >
@@ -79,7 +81,7 @@ const HomeHero = () => {
                   </div>
 
                   <div className={styles.social_btn}>
-                    {TypesSocials.map(({ name, color, link, className }, index) => (
+                    {SocialButtons.map(({ name, color, link, className }, index) => (
                       <Button key={index} name={name} color={color} href={link} className={className} target="blank">
                         {name}
                       </Button>
