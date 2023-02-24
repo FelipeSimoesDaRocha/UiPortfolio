@@ -37,3 +37,33 @@
     display: block;
     padding: 8px 14px;
 }
+
+@media screen and (max-width: 1767px) {
+    .footer {
+        padding-top: 24px;
+        padding-bottom: 32px;
+    }
+
+    .page_padding {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .footer_inner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+
+    .footer_links {
+        width: 300px;
+        margin-right: 0;
+        margin-bottom: 8px;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+}

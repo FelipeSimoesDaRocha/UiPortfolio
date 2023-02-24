@@ -38,7 +38,7 @@ const HomeHero = () => {
   ] as unknown as SocialButton[];
 
   return (
-    <section id="home" className={styles.hero_ui_intro} key="lang-select" >
+    <section id="home" className={styles.hero_ui_intro} >
       <BackgroundAnimation />
       <div className={styles.page_padding}>
         <div className={styles.container}>
@@ -57,6 +57,7 @@ const HomeHero = () => {
                     className={styles.hero_sub_title}
                   />
                 </div>
+
                 <div className={`${styles.section_paragraph}` || `${styles.section_paragraph_intro}`}>
                   <p className={styles.text_color_sec}>
                     Minha paixão é sonhar com ideias e torná-las realidade com interfaces elegantes.
@@ -66,28 +67,29 @@ const HomeHero = () => {
               </div>
 
               <div className={styles.intro_img_wrap} style={{ willChange: "opacity", opacity: 1 }}>
-                <aside className={styles.photo_aside}>
-                  <div className={styles.photo}>
-                    <Image
-                      src={Img}
-                      alt="Imagem de Felipe Rocha"
-                      className={styles.photo}
-                      width={500}
-                      height={624}
-                      objectFit="contain"
-                    />
-                  </div>
+                {/* <aside className={styles.photo_aside}> */}
 
-                  <div className={styles.social_btn}>
-                    {SocialButtons.map(({ name, color, link, className }, index) => (
-                      <Button key={index} name={name} color={color} href={link} className={className} target="blank">
-                        {name}
-                      </Button>
-                    ))}
-                  </div>
-                </aside>
+                <div className={styles.intro_img_blur_bg} style={{ willChange: "opacity", opacity: 1 }}></div>
+
+                <Image
+                  src={Img}
+                  alt="Imagem de Felipe Rocha"
+                  className={styles.intro_img}
+                  width={500}
+                  height={624}
+                  objectFit="contain"
+                />
+
+                {/* <div className={styles.intro_img_overlay}></div> */}
+
+                {/* <div className={styles.social_btn}>
+                  {SocialButtons.map(({ name, color, link, className }, index) => (
+                    <Button key={index} name={name} color={color} href={link} className={className} target="blank">
+                      {name}
+                    </Button>
+                  ))}
+                </div> */}
               </div>
-
             </div>
           </div>
         </div>

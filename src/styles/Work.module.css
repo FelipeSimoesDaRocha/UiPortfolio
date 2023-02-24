@@ -1,8 +1,8 @@
 .section {
+    position: relative;
     padding-bottom: 140px;
     padding-top: 50px;
     background-color: #fff;
-
 }
 
 .page_padding {
@@ -173,7 +173,7 @@
 
 .project_list_img_inner:hover {
     border-radius: 18px;
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
     transform: scale(1) translate(0);
 }
 

@@ -33,7 +33,8 @@ body {
 
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  /* background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
+  background-image: linear-gradient(to right, #0f0c29, #000000, #24243e);
 }
 
 body,
