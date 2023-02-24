@@ -10,6 +10,7 @@ const Work = () => {
     const project = [
         {
             background: "linear-gradient(45deg, #9862f0 0%, #3dc5be 100%)",
+            alt: "Imagem do projeto",
             imgUrl: img,
             video: "",
             linkGit: "",
@@ -17,6 +18,7 @@ const Work = () => {
         },
         {
             background: "linear-gradient(45deg, #bd8e57 0%, #384588 100%)",
+            alt: "Imagem do projeto",
             imgUrl: img,
             video: "",
             linkGit: "",
@@ -24,6 +26,7 @@ const Work = () => {
         },
         {
             background: "linear-gradient(45deg, #3a3c47 0%, #6b7077 100%)",
+            alt: "Imagem do projeto",
             imgUrl: img,
             video: "",
             linkGit: "",
@@ -31,6 +34,7 @@ const Work = () => {
         },
         {
             background: "linear-gradient(45deg, #f4ba24 0%, #ed5456 100%)",
+            alt: "Imagem do projeto",
             imgUrl: img,
             video: "",
             linkGit: "",
@@ -45,17 +49,15 @@ const Work = () => {
                     <div className={styles.section_header}>
                         <h2> Uma pequena seleção do meu trabalho.</h2>
                     </div>
-
                     <div className={styles.projects_wrap}>
                         <div className={styles.projects_list_wrapper}>
                             <div className={styles.projects_list}>
 
-                                {project.map(({ background, imgUrl, video, linkGit, linkProdution }, index) => (
+                                {project.map(({ background, alt, imgUrl }) => (
                                     <div className={styles.projects_list_item} style={{ display: "block" }}>
                                         <div className={styles.projects_list_item_link} style={{ transform: "translate(0px, 0px) scale(1, 1)" }}>
                                             <div className={styles.projects_list_item_wrap}>
                                                 <div className={styles.project_list_item_container}>
-
                                                     <div className={styles.project_item_close} style={{ backgroundColor: "rgba(29, 29, 31, 0.8)", color: "#afafb5" }}>
                                                         <div className={styles.project_item_close_icon}>
                                                             <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -74,11 +76,11 @@ const Work = () => {
                                                         </div>
                                                         <div className={styles.project_list_img_inner}>
                                                             <div className={styles.project_item_vid}>
-                                                                <video width="100%" loop muted playsInline preload="none" id="1892360">
-                                                                    <source src="https://d1ytx91mb072w7.cloudfront.net/workos.mp4" type="video/mp4" />
+                                                                <video width="100%" loop muted playsInline preload="none" >
+                                                                    <source src="" type="video/mp4" />
                                                                 </video>
                                                             </div>
-                                                            <Image src={imgUrl} width={1960} height={1020} className={styles.projects_list_img} />
+                                                            <Image src={imgUrl} width={1960} height={1020} className={styles.projects_list_img} alt={alt} />
                                                             <div style={{ backgroundColor: "rgba(29, 29, 31, 0.8)" }} className={styles.project_item_pause_button}>
                                                                 <div style={{ color: "#afafb5" }} className="project-video-icon project-video-icon--play w-embed">
                                                                     <svg width="10px" height="11px" viewBox="0 0 10 11" version="1.1" xmlns="http://www.w3.org/2000/svg"> <g id="Project-Images" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd"><g fill="currentColor" fillRule="nonzero"> <path d="M0.947560571,11 C1.08435342,11 1.21787613,10.9771858 1.3481287,10.9315574 C1.47838126,10.885929 1.62114497,10.818447 1.77641983,10.7291114 L9.19749712,6.50180767 C9.47570332,6.3410676 9.67900536,6.18639531 9.80740321,6.0377908 C9.93580107,5.88918629 10,5.70889805 10,5.49692609 C10,5.28623492 9.93580107,5.10626688 9.80740321,4.95702197 C9.67900536,4.80777706 9.47570332,4.65483385 9.19749712,4.49819233 L1.77641983,0.266662009 C1.62114497,0.178799311 1.47838126,0.112389968 1.3481287,0.0674339807 C1.21787613,0.0224779936 1.08435342,0 0.947560571,0 C0.678920755,0 0.453834039,0.0951632434 0.272300424,0.28548973 C0.0907668079,0.475816217 0,0.73597818 0,1.06597562 L0,9.92979775 C0,10.2597952 0.0907668079,10.5206616 0.272300424,10.712397 C0.453834039,10.9041323 0.678920755,11 0.947560571,11 Z"></path></g></g></svg>

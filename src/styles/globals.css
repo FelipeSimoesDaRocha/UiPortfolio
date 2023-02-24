@@ -23,7 +23,7 @@
 html,
 body {
   font-size: var(--fs-400);
-  font-display: "swap";
+  font-display: swap;
   font-family: var(--ff-body);
   font-variation-settings: "wght" 450;
   font-variant: common-ligatures contextual;
@@ -60,7 +60,6 @@ blockquote::before {
 blockquote::after {
   content: close-quote;
 }
-
 
 @media screen and (min-device-pixel-ratio: 1.5), screen and (min-resolution: 1.5dppx) {
   body {

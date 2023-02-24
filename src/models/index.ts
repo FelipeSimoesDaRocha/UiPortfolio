@@ -13,6 +13,7 @@ export type LinkItemsProps = {
 
 export type Project = {
     background: string;
+    alt: string,
     imgUrl: string;
     video: string;
     linkGit: string;
