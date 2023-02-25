@@ -1,0 +1,46 @@
+/* latin */
+@font-face {
+    font-family: "Space Grotesk";
+    font-style: var(--fs-normal);
+    font-weight: var(--fw-300);
+    font-display: var(--fd-body);
+    src: url("../../../public/fonts/SpaceGrotesk-3.woff2") format("woff2");
+    unicode-range: calc(--unicode-range);
+}
+/* latin */
+@font-face {
+    font-family: "Space Grotesk";
+    font-style: var(--fs-normal);
+    font-weight: var(--fw-400);
+    font-display: var(--fd-body);
+    src: url("../../../public/fonts/SpaceGrotesk-6.woff2") format("woff2");
+    unicode-range: calc(--unicode-range);
+}
+/* latin */
+@font-face {
+    font-family: "Space Grotesk";
+    font-style: var(--fs-normal);
+    font-weight: var(--fw-500);
+    font-display: var(--fd-body);
+    src: url("../../../public/fonts/SpaceGrotesk-9.woff2") format("woff2");
+    unicode-range: calc(--unicode-range);
+}
+/* latin */
+@font-face {
+    font-family: "Space Grotesk";
+    font-style: var(--fs-normal);
+    font-weight: var(--fw-600);
+    font-display: var(--fd-body);
+    src: url("../../../public/fonts/SpaceGrotesk-12.woff2") format("woff2");
+    unicode-range: calc(--unicode-range);
+}
+
+/* latin */
+@font-face {
+    font-family: "Space Grotesk";
+    font-style: var(--fs-normal);
+    font-weight: var(--fw-700);
+    font-display: var(--fd-body);
+    src: url("../../../public/fonts/SpaceGrotesk-15.woff2") format("woff2");
+    unicode-range: calc(--unicode-range);
+}
