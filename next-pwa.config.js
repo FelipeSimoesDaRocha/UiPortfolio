@@ -1,9 +1,12 @@
 const withPWA = require("next-pwa")
-const isProd = process.env.NODE_ENV === "production"
+// disabled: process.env.NODE_ENV === "development",
 
 module.exports = withPWA({
     pwa: {
         dest: "public",
-        disabled: isProd
+        register: true,
+        skipWaitings: true,
+        disabled: false,
+        sw: "sw.js"
     },
 })

@@ -1,8 +1,14 @@
 {
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "name": "Felipe Rocha - Portfólio",
     "short_name": "Portfólio",
+    "description": "Site utilizando Typescript, React, NextJs",
+    "display": "fullscreen",
+    "lang": "pt-BR",
+    "start_url": "/",
+    "scope": "/app",
     "icons": [
-
         {
             "src": "./icons/mstile-144x144.png",
             "sizes": "144x144",
@@ -21,10 +27,5 @@
             "type": "image/png",
             "purpose": "any"
         }
-    ],
-    "background_color": "#ffffff",
-    "description": "Site utilizando Typescript, React, NextJs",
-    "display": "fullscreen",
-    "start_url": "/",
-    "theme_color": "#ffffff"
+    ]
 }

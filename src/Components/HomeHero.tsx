@@ -50,7 +50,7 @@ const HomeHero = () => {
                     {i18n.t("hero.label")} <strong>Felipe!</strong>
                   </h2>
                   <TypeAnimation
-                    sequence={["Desenvolvedor Front-end", 1500, "Desenvolvedor UX", 1500,]}
+                    sequence={["Developer - Front-end", 1500, "Developer - UX", 1500,]}
                     wrapper="h2"
                     cursor={true}
                     repeat={Infinity}
