@@ -4,8 +4,8 @@
   top: 0;
   right: 0;
   bottom: auto;
-  padding: 10px 6px 0;
-
+  padding: 4px 4px 0;
+  align-items: center;
   z-index: 100;
   background-color: transparent;
   transition: background-color 0.2s, color 0.2s;
@@ -18,8 +18,8 @@
   top: 0;
   right: 0;
   bottom: auto;
-  padding: 10px 6px 6px;
-
+  padding: 4px 4px 0;
+  align-items: center;
   z-index: 100;
   background-color: hsla(0, 0%, 0%, 0.7);
   -webkit-backdrop-filter: blur(12px);
@@ -59,6 +59,11 @@
 .nav_lang svg {
   fill: #fff;
   font-size: 2.2em;
+}
+
+.nav_lang button {
+  height: auto;
+  width: auto;
 }
 
 .nav_lang button :hover {
