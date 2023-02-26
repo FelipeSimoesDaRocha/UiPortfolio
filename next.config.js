@@ -20,7 +20,8 @@ const nextConfig = {
   },
   react: {
     useSuspense: true,
-  }
+  },
+  swcMinify: true,
 };
 
 module.exports = [nextConfig, withPWA];
