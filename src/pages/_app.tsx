@@ -1,5 +1,6 @@
 // Next
 import Head from "next/head";
+import Script from "next/script";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
 
@@ -11,7 +12,6 @@ import "../i18nextInit";
 
 // Vercel-Analytics
 import { Analytics } from "@vercel/analytics/react";
-import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Felipe Rocha</title>
         <meta charSet="utf-8" />
         <meta name="theme-color" content="#fff" />
-        <meta name='viewport' content="width=device-width, initial-scale=1.0, minimum-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Portfólio de Felipe Simões Da Rocha" />
 
         <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
@@ -48,7 +48,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:Github" content="https://github.com/FelipeSimoesDaRocha" />
         <meta property="og:Linkedin" content="https://www.linkedin.com/in/felipe-sim%C3%B5es-da-rocha/" />
       </Head>
-      <Component {...pageProps} />
       <Script
         data-name="BMC-Widget"
         data-cfasync="false"
@@ -61,6 +60,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         data-x_margin="18"
         data-y_margin="18">
       </Script>
+      <Component {...pageProps} />
       <Analytics />
     </>
   )

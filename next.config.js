@@ -1,14 +1,26 @@
 /** @type {import("next").NextConfig} */
-const { pwa } = require('./next-pwa.config')
 
-module.exports = nextConfig = {
+const runtimeCaching = require("next-pwa/cache");
+const withPWA = require("next-pwa")({
+  pwa: {
+    dest: "public",
+    register: true,
+    skipWaitings: true,
+    runtimeCaching,
+    disabled: process.env.NODE_ENV === "development",
+    sw: "sw.js"
+  }
+})
+
+const nextConfig = {
   reactStrictMode: true,
   i18n: {
-    defaultLocale: "pt",
-    locales: ["pt", "en",]
+    locales: ["pt", "en"],
+    defaultLocale: "pt"
   },
   react: {
-    useSuspense: false,
-  },
-  pwa
-};;
+    useSuspense: true,
+  }
+};
+
+module.exports = nextConfig;

@@ -1,4 +1,4 @@
-@import "Fonts/Space-Grotesk.css";
+@import "Fonts/SpaceGrotesk.css";
 
 :root {
   --fs-xl: clamp(1.5rem, 3vw + 1rem, 3rem);

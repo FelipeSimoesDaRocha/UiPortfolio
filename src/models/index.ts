@@ -12,6 +12,7 @@ export type LinkItemsProps = {
 }
 
 export type Project = {
+    key: number;
     background: string;
     alt: string,
     imgUrl: string;

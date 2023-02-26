@@ -36,7 +36,7 @@ i18n
       formatSeparator: ',',
     },
     react: {
-      useSuspense: false,
+      useSuspense: true,
       wait: true,
     },
   } as unknown as Callback);

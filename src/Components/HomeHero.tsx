@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+// Next
 import Image from "next/image";
 
 // Styles
@@ -6,11 +6,15 @@ import styles from "../styles/HomeHero.module.css";
 
 // Antd
 import { Button } from "antd";
+
 // Animation
 import { TypeAnimation } from "react-type-animation";
 
 // Models
 import { SocialButton } from "../models";
+
+// Translations
+import { useTranslation } from "react-i18next";
 
 import BackgroundAnimation from "./svg/BgAnimation";
 import Img from "../../public/assets/photo.png"
@@ -47,7 +51,7 @@ const HomeHero = () => {
               <div className={styles.intro_content}>
                 <div className={styles.heading_ui_wrap}>
                   <h2 className={styles.hero_title}>
-                    {i18n.t("hero.label")} <strong>Felipe!</strong>
+                    {t("hero.label")} <strong>Felipe!</strong>
                   </h2>
                   <TypeAnimation
                     sequence={["Developer - Front-end", 1500, "Developer - UX", 1500,]}
