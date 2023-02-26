@@ -5,7 +5,8 @@ import type { AppProps } from "next/app";
 import { useEffect } from "react";
 
 // Styles
-import "../styles/globals.css"
+import "../styles/globals.css";
+import "../../public/fonts/SpaceGrotesk.css?family=Space+Grotesk:wght@300;400;500;600;700&display=swap";
 
 // Translate
 import "../i18nextInit";
@@ -29,7 +30,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="robots" content="follow,index" />
         <meta name="google-site-verification" content="1Vi5CDNpLH7dXyXdcGFFVBRNG5g7Rdk9_m7y9s0PszE" />
         <meta name='viewport' content="width=device-width, minimum-scale=1.0, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover" />
-
         <meta name="application-name" content="PWA App" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
