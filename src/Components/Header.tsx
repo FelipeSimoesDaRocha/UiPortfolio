@@ -70,9 +70,9 @@ const Header = () => {
   return (
     <Row gutter={[16, 8]} justify="space-around" className={navbar ? `${styles.nav_active}` : `${styles.nav}`}>
       <Col className={styles.logo}>
-        <a href="/#" aria-label="inicio" >
+        <Link href="/#" aria-label="inicio" >
           <Logotipo />
-        </a>
+        </Link>
       </Col>
 
       <Col className={styles.menu} onClick={handleShowMenu}>

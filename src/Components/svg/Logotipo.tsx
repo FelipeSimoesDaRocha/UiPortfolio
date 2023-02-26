@@ -1,5 +1,3 @@
-import styles from "../styles/BackGroundAnimation.module.css";
-
 const Logotipo = () => (
         <svg
             stroke="currentColor"

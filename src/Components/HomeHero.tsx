@@ -4,9 +4,6 @@ import Image from "next/image";
 // Styles
 import styles from "../styles/HomeHero.module.css";
 
-// Antd
-import { Button } from "antd";
-
 // Animation
 import { TypeAnimation } from "react-type-animation";
 
