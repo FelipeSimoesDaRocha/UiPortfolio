@@ -2,7 +2,7 @@
     "theme_color": "#3579f6",
     "background_color": "#ffffff",
     "display": "fullscreen",
-    "scope": "/index",
+    "scope": "/",
     "start_url": "/",
     "lang": "pt-BR",
     "icons": [
