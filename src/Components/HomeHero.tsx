@@ -19,7 +19,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 
 const HomeHero = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const SocialButtons = [
     {
