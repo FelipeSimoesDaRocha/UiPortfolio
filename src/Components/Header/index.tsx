@@ -12,10 +12,10 @@ import { FaGlobeAmericas } from "react-icons/fa";
 
 // Components
 import { Button, Col, Row } from "antd";
-import Logotipo from "../Components/svg/Logotipo";
+import Logotipo from "../svg/Logotipo";
 
 // Models
-import { LinkItemsProps } from "../models";
+import { LinkItemsProps } from "../../models";
 
 
 const Header = () => {

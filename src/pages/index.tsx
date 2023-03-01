@@ -4,7 +4,7 @@ import { NextPage } from "next";
 // Components
 import { Suspense } from "react";
 
-import Header from "../Header";
+import Header from "../Components/Header";
 import HomeHero from "Components/Hero";
 import Work from "Components/Work";
 import Footer from "../Components/Footer";
