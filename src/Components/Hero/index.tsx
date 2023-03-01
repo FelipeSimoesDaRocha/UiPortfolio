@@ -2,23 +2,23 @@
 import Image from "next/image";
 
 // Styles
-import styles from "../styles/HomeHero.module.css";
+import styles from "./styles.module.css";
 
 // Animation
 import { TypeAnimation } from "react-type-animation";
 
 // Models
-import { SocialButton } from "../models";
+import { SocialButton } from "../../models";
 
 // Translations
 import { useTranslation } from "react-i18next";
 
-import BackgroundAnimation from "./svg/BgAnimation";
-import Img from "../../public/assets/photo.png"
+import BackgroundAnimation from "../svg/BgAnimation";
+import Img from "../../../public/assets/photo.png"
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 
-const HomeHero = () => {
+const Hero = () => {
   const { t } = useTranslation();
 
   const SocialButtons = [
@@ -99,4 +99,4 @@ const HomeHero = () => {
   );
 };
 
-export default HomeHero;
+export default Hero;

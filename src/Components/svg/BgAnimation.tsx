@@ -1,4 +1,4 @@
-import styles from "../../styles/HomeHero.module.css";
+import styles from "./styles.module.css";
 
 const BackgroundAnimation = () => (
   <div className={styles.bg}>

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 // Styles
-import styles from "../styles/Header.module.css";
+import styles from "./styles.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 // Translate
@@ -12,7 +12,7 @@ import { FaGlobeAmericas } from "react-icons/fa";
 
 // Components
 import { Button, Col, Row } from "antd";
-import Logotipo from "./svg/Logotipo";
+import Logotipo from "../Components/svg/Logotipo";
 
 // Models
 import { LinkItemsProps } from "../models";

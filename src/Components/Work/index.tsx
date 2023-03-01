@@ -1,9 +1,12 @@
-import styles from "../styles/Work.module.css";
+import styles from "./styles.module.css";
 import Image from "next/image";
-import img from "../../public/assets/img.png"
+import img from "../../../public/assets/img.png"
+import img2 from "../../../public/assets/uiFinancial.png"
+
+
 
 // Models
-import { Project } from "../models";
+import { Project } from "../../models";
 
 
 const Work = () => {
@@ -21,7 +24,7 @@ const Work = () => {
             key: 2,
             background: "linear-gradient(45deg, #bd8e57 0%, #384588 100%)",
             alt: "Imagem do projeto",
-            imgUrl: img,
+            imgUrl: img2,
             video: "",
             linkGit: "",
             linkProdution: "",
