@@ -15,6 +15,8 @@ import { useTranslation } from "react-i18next";
 
 import BackgroundAnimation from "../svg/BgAnimation";
 import Img from "../../../public/assets/photo.png"
+import Banner from "../../../public/assets/banner.png"
+
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 
@@ -68,9 +70,18 @@ const Hero = () => {
               </div>
 
               <div className={styles.intro_img_wrap} style={{ willChange: "opacity", opacity: 1 }}>
-                {/* <aside className={styles.photo_aside}> */}
-
                 <div className={styles.intro_img_blur_bg} style={{ willChange: "opacity", opacity: 1 }}></div>
+
+                <div className={styles.banner}>
+                  <Image
+                    src={Banner}
+                    alt="Imagem de Felipe Rocha"
+                    className={styles.intro_img}
+                    width={750}
+                    height={624}
+                    objectFit="contain"
+                  />
+                </div>
 
                 <Image
                   src={Img}
@@ -80,16 +91,6 @@ const Hero = () => {
                   height={624}
                   objectFit="contain"
                 />
-
-                {/* <div className={styles.intro_img_overlay}></div> */}
-
-                {/* <div className={styles.social_btn}>
-                  {SocialButtons.map(({ name, color, link, className }, index) => (
-                    <Button key={index} name={name} color={color} href={link} className={className} target="blank">
-                      {name}
-                    </Button>
-                  ))}
-                </div> */}
               </div>
             </div>
           </div>
