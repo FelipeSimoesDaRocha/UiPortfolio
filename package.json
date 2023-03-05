@@ -1,12 +1,24 @@
 {
-  "name": "felipe_portfolio",
+  "name": "felipe",
   "version": "0.1.0",
+  "description": "Programming related icons collection",
   "private": true,
   "author": {
     "name": "Felipe simões da rocha",
-    "email": "felipe.simoesdarocha@gmail.com",
-    "url": "https://felipe-rocha.vercel.app/"
+    "email": "felipe.simoesdarocha@gmail.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FelipeSimoesDaRocha/UiPortfolio"
+  },
+  "bugs": {
+    "url": "https://github.com/FelipeSimoesDaRocha/UiPortfolio/issues"
+  },
+  "homepage": "https://felipe-rocha.vercel.app/",
+  "keywords": [
+    "programming"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -38,7 +50,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.4.0",
-    "@types/node": "^18.14.0",
+    "@types/node": "^18.14.6",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
