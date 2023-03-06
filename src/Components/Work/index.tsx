@@ -1,9 +1,9 @@
 import styles from "./styles.module.css";
 import Image from "next/image";
 import img from "../../../public/assets/img.png"
-import img2 from "../../../public/assets/uiFinancial.png"
-
-
+import img2 from "../../../public/assets/img2.png"
+import img3 from "../../../public/assets/img3.png"
+import img4 from "../../../public/assets/img4.png"
 
 // Models
 import { Project } from "../../models";
@@ -26,26 +26,26 @@ const Work = () => {
             alt: "Imagem do projeto",
             imgUrl: img2,
             video: "",
-            linkGit: "",
-            linkProdution: "",
+            linkGit: "https://github.com/FelipeSimoesDaRocha/UiFinances",
+            linkProdution: "https://ui-finances.vercel.app/",
         },
         {
             key: 3,
             background: "linear-gradient(45deg, #3a3c47 0%, #6b7077 100%)",
             alt: "Imagem do projeto",
-            imgUrl: img,
+            imgUrl: img3,
             video: "",
-            linkGit: "",
-            linkProdution: "",
+            linkGit: "https://github.com/WarwickBr1/Ntf-expert",
+            linkProdution: "https://ntf-expert.vercel.app/",
         },
         {
             key: 4,
             background: "linear-gradient(45deg, #f4ba24 0%, #ed5456 100%)",
             alt: "Imagem do projeto",
-            imgUrl: img,
+            imgUrl: img4,
             video: "",
-            linkGit: "",
-            linkProdution: "",
+            linkGit: "https://github.com/WarwickBr1/Dev-expert",
+            linkProdution: "https://dev-expert-ten.vercel.app/",
         }
     ] as unknown as Project[];
 
