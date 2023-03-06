@@ -5,11 +5,8 @@ import img2 from "../../../public/assets/img2.png"
 import img3 from "../../../public/assets/img3.png"
 import img4 from "../../../public/assets/img4.png"
 
-
-
 // Models
 import { Project } from "../../models";
-
 
 const Work = () => {
     const project = [
@@ -58,14 +55,12 @@ const Work = () => {
                     <div className={styles.section_header}>
                         <h2> Uma pequena seleção do meu trabalho.</h2>
                     </div>
-
                     <div className={styles.projects_list}>
                         {project.map(item => (
                             <div key={item.key} className={styles.list_item}>
                                 <div className={styles.item_container}>
                                     <div className={styles.list_img_wrap}>
                                         <div className={styles.list_item_bg} style={{ background: item.background }}></div>
-
                                         <div className={styles.list_img_inner}>
                                             <Image src={item.imgUrl} width={1960} height={1020} alt={item.alt} />
                                         </div>

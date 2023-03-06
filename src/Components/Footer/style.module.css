@@ -18,12 +18,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
     z-index: 10;
     cursor: pointer;
-}
-
-.text_color_sec {
     color: #687076;
 }
 
@@ -31,6 +27,10 @@
     display: flex;
     margin-right: -14px;
     align-items: center;
+}
+
+.footer_links a {
+    color: #687076;
 }
 
 .footer_link {
