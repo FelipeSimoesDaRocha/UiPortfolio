@@ -1,6 +1,11 @@
 {
     "hero": {
         "Hello": "Olá",
-        "label": "Olá, eu sou"
+        "label": "Olá, eu sou",
+        "text": "Minha paixão é sonhar com ideias e torná-las realidade com interfaces elegantes.",
+        "blockquote": "Sempre em busca do proximo nivel."
+    },
+    "work": {
+        "label": "Uma pequena seleção do meu trabalho."
     }
 }

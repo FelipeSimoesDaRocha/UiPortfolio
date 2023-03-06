@@ -20,7 +20,7 @@ import Banner from "../../../public/assets/banner.png"
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 
-const Hero = () => {
+export default function Hero() {
   const { t } = useTranslation();
 
   const SocialButtons = [
@@ -65,13 +65,14 @@ const Hero = () => {
                   <p className={styles.text_color_sec}>
                     Minha paixão é sonhar com ideias e torná-las realidade com interfaces elegantes.
                     <strong> Sempre em busca do proximo nivel.</strong>
+                    {/* {t("hero.text")}
+                    <blockquote>{t("hero.blockquote")}</blockquote> */}
                   </p>
                 </div>
               </div>
 
-              <div className={styles.intro_img_wrap} style={{ willChange: "opacity", opacity: 1 }}>
-                <div className={styles.intro_img_blur_bg} style={{ willChange: "opacity", opacity: 1 }}></div>
-
+              <div className={styles.intro_img_wrap}>
+                <div className={styles.intro_img_blur_bg}></div>
                 <div className={styles.banner}>
                   <Image
                     src={Banner}
@@ -99,5 +100,3 @@ const Hero = () => {
     </section >
   );
 };
-
-export default Hero;

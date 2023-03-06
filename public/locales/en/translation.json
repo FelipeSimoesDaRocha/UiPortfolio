@@ -1,6 +1,11 @@
 {
   "hero": {
     "Hello": "Hello",
-    "label": "I' am"
+    "label": "I' am",
+    "text": "My passion is dreaming up ideas and making them come true with elegant interfaces.",
+    "blockquote": "Always looking for the next level."
+  },
+  "work": {
+    "label": "A small selection of my work."
   }
 }

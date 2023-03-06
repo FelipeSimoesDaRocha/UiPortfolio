@@ -4,6 +4,8 @@ import Script from "next/script";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
 
+import { Provider as NextAuthProvider } from 'next-auth/client'
+
 // Styles
 import "../styles/globals.css";
 import "../../public/fonts/SpaceGrotesk.css?display=swap";
@@ -81,7 +83,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         data-x_margin="18"
         data-y_margin="18">
       </Script>
-      <Component {...pageProps} />
+      <NextAuthProvider session={pageProps.session}>
+        <Component {...pageProps} />
+      </NextAuthProvider>
       <Analytics />
     </>
   )

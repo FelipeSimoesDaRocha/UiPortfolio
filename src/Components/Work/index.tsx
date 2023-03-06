@@ -5,10 +5,14 @@ import img2 from "../../../public/assets/img2.png"
 import img3 from "../../../public/assets/img3.png"
 import img4 from "../../../public/assets/img4.png"
 
+import { useTranslation } from "react-i18next";
+
 // Models
 import { Project } from "../../models";
 
 const Work = () => {
+    const { t } = useTranslation();
+
     const project = [
         {
             key: 1,
@@ -54,6 +58,7 @@ const Work = () => {
                 <div className={styles.container}>
                     <div className={styles.section_header}>
                         <h2> Uma pequena seleção do meu trabalho.</h2>
+                        {/* <h2> {t("work.label")}</h2> */}
                     </div>
                     <div className={styles.projects_list}>
                         {project.map(item => (
