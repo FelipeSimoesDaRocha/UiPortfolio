@@ -57,8 +57,8 @@ const Work = () => {
             <div className={styles.page_padding}>
                 <div className={styles.container}>
                     <div className={styles.section_header}>
-                        <h2> Uma pequena seleção do meu trabalho.</h2>
-                        {/* <h2> {t("work.label")}</h2> */}
+                        {/* <h2> Uma pequena seleção do meu trabalho.</h2> */}
+                        <h2> {t("work.label")}</h2>
                     </div>
                     <div className={styles.projects_list}>
                         {project.map(item => (

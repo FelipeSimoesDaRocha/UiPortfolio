@@ -1,0 +1,10 @@
+query GetCategories($email: String!) {
+  userByEmail(email: $email) {
+    categories {
+      data {
+        _id
+        name
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+mutation updatePaymentValue($pay: Boolean $transactionId: ID!) {
+  updateTransaction(id: $transactionId data: {
+    pay: $pay
+  }) {
+    _id
+    price
+    pay
+    dueDate
+    category {
+      _id
+      name
+    }
+    title
+  }
+}

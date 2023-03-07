@@ -1,19 +1,29 @@
 // Next
-import Head from "next/head";
-import Script from "next/script";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
-
-import { Provider as NextAuthProvider } from 'next-auth/client'
+import Script from "next/script";
+import Head from "next/head";
 
 // Styles
 import "../styles/globals.css";
 import "../../public/fonts/SpaceGrotesk.css?display=swap";
+import { theme } from "../styles/theme";
 
 // Translate
 import "../i18nextInit";
 
-// Vercel-Analytics
+// Providers
+import { Provider as NextAuthProvider } from 'next-auth/client'
+import { ApolloProvider } from "@apollo/client";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { ChakraProvider } from "@chakra-ui/react";
+import { SidebarDrawerProvider } from "../context/SidebarDrawerContext";
+
+// Services
+import clientApollo from "services/apollo-client";
+import { queryClient } from "services/querryClient";
+
+// Analytics
 import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -70,23 +80,31 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:url" content="" />
         <meta property="og:image" content="" />
       </Head>
-      <Script
-        id="my-script"
-        data-name="BMC-Widget"
-        data-cfasync="false"
-        src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-        data-id="feliperocha"
-        data-description="Support me on Buy me a coffee!"
-        data-message=""
-        data-color="#bdf523"
-        data-position="Right"
-        data-x_margin="18"
-        data-y_margin="18">
-      </Script>
       <NextAuthProvider session={pageProps.session}>
-        <Component {...pageProps} />
+        <ApolloProvider client={clientApollo}>
+          <QueryClientProvider client={queryClient}>
+            <ChakraProvider theme={theme}>
+              <SidebarDrawerProvider>
+                <Script
+                  id="my-script"
+                  data-name="BMC-Widget"
+                  data-cfasync="false"
+                  src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+                  data-id="feliperocha"
+                  data-description="Support me on Buy me a coffee!"
+                  data-message=""
+                  data-color="#bdf523"
+                  data-position="Right"
+                  data-x_margin="18"
+                  data-y_margin="18">
+                </Script>
+                <Component {...pageProps} />
+                <Analytics />
+              </SidebarDrawerProvider>
+            </ChakraProvider>
+          </QueryClientProvider>
+        </ApolloProvider>
       </NextAuthProvider>
-      <Analytics />
     </>
   )
 }

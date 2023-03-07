@@ -1,0 +1,36 @@
+mutation updateTransaction(
+  $title: String
+  $price: Float
+  $pay: Boolean
+  $dueDate: String
+  $category: ID
+  $type: ID
+  $transactionId: ID!
+) {
+  updateTransaction(id: $transactionId data: {
+    title: $title
+    price: $price
+    dueDate: $dueDate
+    pay: $pay
+    category: {
+      connect: $category
+    }
+    type: {
+      connect: $type
+    }
+  }) {
+    _id
+    title
+    price
+    pay
+    dueDate
+    category {
+      _id
+      name
+    }
+    type {
+      _id
+      name
+    }
+  }
+}

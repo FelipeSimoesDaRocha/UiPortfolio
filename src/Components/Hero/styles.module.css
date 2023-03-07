@@ -89,7 +89,7 @@
   /* animation: moveToLeft 1s ease-in-out; */
 }
 
-.text_color_sec strong {
+.section_paragraph blockquote {
   color: #fff;
   font-size: 1.3rem;
 }
@@ -170,7 +170,6 @@
   background-image: linear-gradient(180deg, #f6b918, #442300);
   background-clip: border-box;
 }
-
 
 .intro_img_blur_bg {
   position: absolute;

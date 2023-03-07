@@ -1,0 +1,21 @@
+query GetTransactions($userId: String!, $initData: String!, $endData: String!) {
+  transactionByData(userId: $userId, initData: $initData, endData: $endData) {
+    data {
+      _id
+      title
+      price
+      pay
+      dueDate
+      category {
+        _id
+        name
+      }
+      type {
+        _id
+        name
+      }
+    }
+  after
+  before
+  }
+}

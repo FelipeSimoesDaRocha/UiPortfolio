@@ -1,0 +1,16 @@
+mutation CreatedUser(
+  $email: String!
+  $firstName: String
+  $lastName: String
+) {
+  createUser(data: {
+    email: $email
+    firstName: $firstName
+    lastName: $lastName
+  }) {
+    email,
+    _id
+    lastName
+    firstName
+  }
+}

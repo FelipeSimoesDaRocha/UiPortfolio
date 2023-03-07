@@ -1,0 +1,8 @@
+query {
+  allTypes {
+    data {
+      _id
+      name
+    }
+  }
+}

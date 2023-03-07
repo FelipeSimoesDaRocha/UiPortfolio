@@ -1,0 +1,6 @@
+mutation createdCategory($name: String!, $userId: ID!) {
+  createCategory(data: { name: $name, user: { connect: $userId } }) {
+    _id
+    name
+  }
+}

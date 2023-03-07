@@ -1,0 +1,35 @@
+mutation createdTransaction(
+  $title: String
+  $price: Float
+  $pay: Boolean
+  $dueDate: String
+  $category: ID
+  $type: ID
+  $userId: ID!
+) {
+  createTransaction(
+    data: {
+      title: $title
+      price: $price
+      dueDate: $dueDate
+      pay: $pay
+      category: { connect: $category }
+      type: { connect: $type }
+      user: { connect: $userId }
+    }
+  ) {
+    _id
+    title
+    price
+    pay
+    dueDate
+    category {
+      _id
+      name
+    }
+    type {
+      _id
+      name
+    }
+  }
+}

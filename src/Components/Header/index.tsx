@@ -82,7 +82,7 @@ const Header = () => {
       <Col className={styles.nav_link}>
         {navigationsItems.map((navItem, index) => (
           <Link key={index} href={navItem.route} >
-            {navItem.name}
+            {languageSelected ? navItem.name : navItem.enName}
           </Link>
         ))}
       </Col>

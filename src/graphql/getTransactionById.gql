@@ -1,0 +1,17 @@
+query GetTransactionById($id: ID!){
+  findTransactionByID(id: $id) {
+    _id
+    title
+    price
+    pay
+    dueDate
+    category {
+      _id
+      name
+    }
+    type {
+      _id
+      name
+    }
+  }
+}

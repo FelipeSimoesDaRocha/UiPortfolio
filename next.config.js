@@ -22,6 +22,15 @@ const nextConfig = {
     useSuspense: true,
   },
   swcMinify: true,
+  webpack: config => {
+    config.module.rules.push({
+      test: /\.gql$/,
+      exclude: /node_modules/,
+      loader: 'graphql-tag/loader'
+    })
+
+    return config
+  }
 };
 
 module.exports = [nextConfig, withPWA];

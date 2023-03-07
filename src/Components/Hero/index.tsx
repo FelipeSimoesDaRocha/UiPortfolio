@@ -8,7 +8,7 @@ import styles from "./styles.module.css";
 import { TypeAnimation } from "react-type-animation";
 
 // Models
-import { SocialButton } from "../../models";
+// import { SocialButton } from "../../models";
 
 // Translations
 import { useTranslation } from "react-i18next";
@@ -17,28 +17,27 @@ import BackgroundAnimation from "../svg/BgAnimation";
 import Img from "../../../public/assets/photo.png"
 import Banner from "../../../public/assets/banner.png"
 
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-
+// import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   const { t } = useTranslation();
 
-  const SocialButtons = [
-    {
-      name: "Linkedin",
-      color: "#0077b5",
-      icon: <FaLinkedin />,
-      link: "https://www.linkedin.com/in/felipe-sim%C3%B5es-da-rocha",
-      className: styles.linkedin
-    },
-    {
-      name: "Github",
-      color: " #333",
-      icon: <FaGithub />,
-      link: "https://github.com/FelipeSimoesDaRocha",
-      className: styles.github
-    },
-  ] as unknown as SocialButton[];
+  // const SocialButtons = [
+  //   {
+  //     name: "Linkedin",
+  //     color: "#0077b5",
+  //     icon: <FaLinkedin />,
+  //     link: "https://www.linkedin.com/in/felipe-sim%C3%B5es-da-rocha",
+  //     className: styles.linkedin
+  //   },
+  //   {
+  //     name: "Github",
+  //     color: " #333",
+  //     icon: <FaGithub />,
+  //     link: "https://github.com/FelipeSimoesDaRocha",
+  //     className: styles.github
+  //   },
+  // ] as unknown as SocialButton[];
 
   return (
     <section id="home" className={styles.hero_ui_intro} >
@@ -63,11 +62,12 @@ export default function Hero() {
 
                 <div className={`${styles.section_paragraph}` || `${styles.section_paragraph_intro}`}>
                   <p className={styles.text_color_sec}>
-                    Minha paixão é sonhar com ideias e torná-las realidade com interfaces elegantes.
-                    <strong> Sempre em busca do proximo nivel.</strong>
-                    {/* {t("hero.text")}
-                    <blockquote>{t("hero.blockquote")}</blockquote> */}
+                    {/* Minha paixão é sonhar com ideias e torná-las realidade com interfaces elegantes.
+                    <strong> Sempre em busca do proximo nivel.</strong> */}
+                    {t("hero.text")}
                   </p>
+                  <blockquote>{t("hero.blockquote")}</blockquote>
+
                 </div>
               </div>
 
@@ -99,4 +99,4 @@ export default function Hero() {
       </div>
     </section >
   );
-};
+}
