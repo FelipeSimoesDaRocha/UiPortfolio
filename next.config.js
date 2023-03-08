@@ -22,6 +22,10 @@ const nextConfig = {
     useSuspense: true,
   },
   swcMinify: true,
+  experimental: {
+    appDir: true,
+    runtime: 'experimental-edge'
+  },
   webpack: config => {
     config.module.rules.push({
       test: /\.gql$/,

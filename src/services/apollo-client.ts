@@ -6,7 +6,7 @@ const fromBase64 = (value: string) => {
   return buff.toString('ascii')
 }
 const httpLink = createHttpLink({
-  uri: 'https://graphql.fauna.com/graphql'
+  uri: process.env.NEXT_PUBLIC_FAUNADB_KEY_DOMAIN
 })
 
 const authLink = setContext((_, { headers }) => {
