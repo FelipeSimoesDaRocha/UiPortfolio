@@ -13,7 +13,7 @@ import { theme } from "../styles/theme";
 import "../i18nextInit";
 
 // Providers
-import { Provider as NextAuthProvider } from 'next-auth/client'
+import { Provider as SessionProvider  } from 'next-auth/client'
 import { ApolloProvider } from "@apollo/client";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -26,7 +26,7 @@ import { queryClient } from "services/querryClient";
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps : { session, ...pageProps }}: AppProps) {
   useEffect(() => {
     if (localStorage.i18nextLng) {
       localStorage.setItem("i18nextLng", "pt");
@@ -80,7 +80,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:url" content="" />
         <meta property="og:image" content="" />
       </Head>
-      <NextAuthProvider session={pageProps.session}>
+      <SessionProvider  session={session}>
         <ApolloProvider client={clientApollo}>
           <QueryClientProvider client={queryClient}>
             <ChakraProvider theme={theme}>
@@ -104,7 +104,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             </ChakraProvider>
           </QueryClientProvider>
         </ApolloProvider>
-      </NextAuthProvider>
+      </SessionProvider>
     </>
   )
 }

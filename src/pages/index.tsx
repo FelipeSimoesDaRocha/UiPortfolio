@@ -1,9 +1,10 @@
 // Next
 import { NextPage } from "next";
 
-// Components
+// Suspense
 import { Suspense } from "react";
 
+// Components
 import Header from "../Components/Header";
 import Hero from "Components/Hero";
 import Work from "Components/Work";
