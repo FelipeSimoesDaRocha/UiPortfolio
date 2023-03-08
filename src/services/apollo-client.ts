@@ -13,7 +13,7 @@ const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      authorization: fromBase64("process.env.NEXT_PUBLIC_FAUNADB_KEY_GRAPHQL")
+      authorization: fromBase64(process.env.NEXT_PUBLIC_FAUNADB_KEY_GRAPHQL)
     }
   }
 })

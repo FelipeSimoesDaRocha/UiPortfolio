@@ -5,7 +5,7 @@ import { NextPage } from "next";
 import { Suspense } from "react";
 
 import Header from "../Components/Header";
-import HomeHero from "Components/Hero";
+import Hero from "Components/Hero";
 import Work from "Components/Work";
 import Footer from "../Components/Footer";
 
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
     <>
       <Header />
       <Suspense fallback="loading">
-        <HomeHero />
+        <Hero />
         <Work />
       </Suspense>
       <Footer />
