@@ -1,25 +1,24 @@
-// import NextAuth from 'next-auth'
-// import Providers from 'next-auth/providers'
-// import clientApollo from '../../../services/apollo-client'
+import NextAuth from 'next-auth'
+import Providers from 'next-auth/providers'
+import clientApollo from '../../../services/apollo-client'
 
-// import GET_USER_BY_EMAIL from '../../../graphql/getUserByEmail.gql'
-// import CREATED_USER from '../../../graphql/createdUser.gql'
-
-// import { session, user } from "../../../models";
+import GET_USER_BY_EMAIL from '../../../graphql/getUserByEmail.gql'
+import CREATED_USER from '../../../graphql/createdUser.gql'
 
 
-// export default NextAuth({
-//   providers: [
-//     Providers.GitHub({
-//       clientId: process.env.GITHUB_ID,
-//       clientSecret: process.env.GITHUB_SECRET,
-//       scope: 'read:user'
-//     }),
-//     Providers.Google({
-//       clientId: process.env.GOOGLE_ID,
-//       clientSecret: process.env.GOOGLE_SECRET
-//     })
-//   ],
+export default NextAuth({
+  providers: [
+    Providers.GitHub({
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
+      scope: 'read:user'
+    }),
+    Providers.Google({
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_SECRET
+    })
+  ],
+
 //   callbacks: {
 //     async session(session: session) {
 //       try {
@@ -71,7 +70,8 @@
 //       }
 //     }
 //   },
-//   pages: {
-//     error: '/auth/error'
-//   }
-// })
+
+  pages: {
+    error: '/auth/error'
+  }
+})

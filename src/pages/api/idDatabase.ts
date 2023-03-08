@@ -11,9 +11,7 @@ type User = {
     idDatabase: string
   }
 }
-
-export default async function handle(req: NextApiRequest, res: NextApiResponse) {
-
+const apiNext = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'POST') {
     const session = await getSession({ req })
 
@@ -43,11 +41,14 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
 
       idDatabaseNotion = idDatabase
     }
+    res.setHeader("Cache-Control", "s-maxage=5, stale-while-revalidate");
 
-    return res.status(200).json({idDatabase :idDatabaseNotion})
+    return res.status(200).json({ idDatabase: idDatabaseNotion })
   } else {
     res.setHeader('Allow', "POST")
     res.status(405).end('Method not allowed')
   }
-  
+
 }
+
+export default apiNext
