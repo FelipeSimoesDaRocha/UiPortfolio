@@ -7,7 +7,6 @@ async function handle(req: NextRequest, res: NextResponse) {
   const errorPage = "/login";
   const basePath = parseUrl(process.env.NEXTAUTH_URL).path;
 
-  console.log("getSession", getSession)
 
   if (
     req.nextUrl.pathname.startsWith(basePath) ||

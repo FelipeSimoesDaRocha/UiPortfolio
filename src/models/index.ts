@@ -20,18 +20,3 @@ export type Project = {
     linkGit: string;
     linkProdution: string
 };
-
-export interface session extends Record<string, unknown> {
-    user: {
-        name: string
-        email: string
-        image: string
-    }
-    expires: string
-}
-
-export interface user extends Record<string, unknown> {
-    name: string
-    email: string
-    image: string
-}
