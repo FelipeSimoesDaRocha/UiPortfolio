@@ -14,6 +14,7 @@ import { getAddress } from 'services/api'
 
 // Models
 import { Address, iProps } from 'models'
+import { toast } from 'react-toastify'
 
 
 export type { Address }
@@ -42,9 +43,9 @@ const CepInput: React.FC<iProps> = ({ name, label, initialValue, required, onGet
       }
 
       return Promise.resolve()
-    } catch (error: any) {
+    } catch (error) {
       setCep(undefined)
-      return Promise.reject(error.message)
+      toast.error(`Um erro inesperado aconteceu`)
     } finally {
       setLoading(false)
     }

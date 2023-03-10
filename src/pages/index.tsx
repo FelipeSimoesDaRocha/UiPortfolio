@@ -12,14 +12,12 @@ import Footer from "../Components/Footer";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <Suspense fallback="loading">
       <Header />
-      <Suspense fallback="loading">
-        <Hero />
-        <Work />
-      </Suspense>
+      <Hero />
+      <Work />
       <Footer />
-    </>
+    </Suspense>
   );
 };
 

@@ -1,7 +1,7 @@
 // Next
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/react"
+import { signIn, signOut, useSession } from "next-auth/react";
 
 // Styles
 import styles from "./styles.module.css";
@@ -28,9 +28,9 @@ const Header = () => {
 
   const { t, i18n } = useTranslation();
 
-  const { data: session } = useSession()
+  const { data: session } = useSession();
 
-  const [languageSelected, setLanguageSelected] = useState("")
+  const [languageSelected, setLanguageSelected] = useState("");
   const navigationsItems: LinkItemsProps[] = [
     {
       name: "Projetos",
@@ -42,7 +42,7 @@ const Header = () => {
       route: "/#about",
       enName: "About",
     }
-  ]
+  ];
 
   const handleChangeBackground = () => {
     if (window.scrollY >= 80) {
@@ -52,7 +52,7 @@ const Header = () => {
     }
 
     if (window.scrollY >= 800) {
-      setModalStyle(true)
+      setModalStyle(true);
     } else {
       setModalStyle(false);
     }
@@ -66,7 +66,7 @@ const Header = () => {
     setLanguageSelected(lng);
     i18n.changeLanguage(lng);
     localStorage.setItem("i18nextLng", lng);
-    setModal(false)
+    setModal(false);
   }
 
   return (
