@@ -24,13 +24,13 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     appDir: true,
-    runtime: 'experimental-edge'
+    runtime: "experimental-edge"
   },
   webpack: config => {
     config.module.rules.push({
       test: /\.gql$/,
       exclude: /node_modules/,
-      loader: 'graphql-tag/loader'
+      loader: "graphql-tag/loader"
     })
 
     return config

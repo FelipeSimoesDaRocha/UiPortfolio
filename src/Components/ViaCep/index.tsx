@@ -1,68 +1,68 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 // Styles
-import { Container } from './styles'
+import { Container } from "./styles";
 
 // Antd
-import { Form } from 'antd'
+import { Form } from "antd";
 
 // Mask
-import MaskedInput from 'antd-mask-input'
+import MaskedInput from "antd-mask-input";
 
 // Api
-import { getAddress } from 'services/api'
+import { getAddress } from "services/api";
 
 // Models
-import { Address, iProps } from 'models'
-import { toast } from 'react-toastify'
+import { Address, iProps } from "models";
+import { toast } from "react-toastify";
 
 
 export type { Address }
 
 const CepInput: React.FC<iProps> = ({ name, label, initialValue, required, onGetCep }) => {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
-  const unmaskedCep = value => value && String(value).replace(/[^0-9]/g, '')
+  const unmaskedCep = value => value && String(value).replace(/[^0-9]/g, "");
 
-  const [cep, setCep] = useState(unmaskedCep(initialValue))
+  const [cep, setCep] = useState(unmaskedCep(initialValue));
 
   const fetchCep = async cep => {
     try {
-      setLoading(true)
+      setLoading(true);
 
-      const response = await getAddress(cep)
+      const response = await getAddress(cep);
 
       if (response.data.erro) {
-        throw Error('O CEP informado é inválido')
+        throw Error("O CEP informado é inválido");
       }
 
-      setCep(cep)
+      setCep(cep);
 
       if (onGetCep) {
-        onGetCep(response.data)
+        onGetCep(response.data);
       }
 
-      return Promise.resolve()
+      return Promise.resolve();
     } catch (error) {
-      setCep(undefined)
-      toast.error(`Um erro inesperado aconteceu`)
+      setCep(undefined);
+      toast.error(`Um erro inesperado aconteceu`);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const isValidCep = value => {
-    const cepValue = unmaskedCep(value)
+    const cepValue = unmaskedCep(value);
 
     if (!cepValue || cepValue.length !== 8) {
-      return Promise.reject('O CEP informado é inválido')
+      return Promise.reject("O CEP informado é inválido");
     }
 
     if (cep !== cepValue) {
-      return fetchCep(cepValue)
+      return fetchCep(cepValue);
     }
 
-    return Promise.resolve()
+    return Promise.resolve();
   }
 
   return (
@@ -72,8 +72,8 @@ const CepInput: React.FC<iProps> = ({ name, label, initialValue, required, onGet
         label={label}
         initialValue={initialValue}
         hasFeedback
-        validateStatus={loading ? 'validating' : ''}
-        validateTrigger={['onChange', 'onFinish']}
+        validateStatus={loading ? "validating" : ""}
+        validateTrigger={["onChange", "onFinish"]}
         rules={[
           {
             required,
@@ -91,4 +91,4 @@ CepInput.defaultProps = {
   required: true
 }
 
-export default CepInput
+export default CepInput;

@@ -8,18 +8,18 @@ import Head from "next/head";
 import "../styles/globals.css";
 import { theme } from "../styles/theme";
 
-//Font
+//Fonts
 import "../../public/fonts/SpaceGrotesk.css?display=swap";
 
 // Translate
 import "../i18nextInit";
 
 // Providers
-import { SessionProvider } from 'next-auth/react'
+import { SessionProvider } from "next-auth/react";
 import { ApolloProvider } from "@apollo/client";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ChakraProvider } from "@chakra-ui/react";
-import type { Session } from "next-auth"
+import type { Session } from "next-auth";
 
 // Services
 import clientApollo from "services/apollo-client";
@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps<{ s
         <title>Felipe Rocha</title>
         <meta name="robots" content="follow,index" />
         <meta name="google-site-verification" content="1Vi5CDNpLH7dXyXdcGFFVBRNG5g7Rdk9_m7y9s0PszE" />
-        <meta name='viewport' content="width=device-width, minimum-scale=1.0, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
         <meta name="application-name" content="PWA App" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -109,4 +109,4 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps<{ s
   )
 }
 
-export default MyApp
+export default MyApp;

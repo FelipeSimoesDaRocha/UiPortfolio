@@ -11,11 +11,11 @@ import { TypeAnimation } from "react-type-animation";
 import { useTranslation } from "react-i18next";
 
 import BackgroundAnimation from "../svg/BgAnimation";
-import Img from "../../../public/assets/photo.png"
-import Banner from "../../../public/assets/banner.png"
+import Img from "../../../public/assets/photo.png";
+import Banner from "../../../public/assets/banner.png";
 
 
-export default function Hero() {
+const Hero = () => {
   const { t } = useTranslation();
 
   return (
@@ -77,3 +77,5 @@ export default function Hero() {
     </section >
   );
 }
+
+export default Hero

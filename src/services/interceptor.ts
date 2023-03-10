@@ -1,5 +1,5 @@
-import { AxiosInstance } from 'axios';
-import Cookie from 'universal-cookie';
+import { AxiosInstance } from "axios";
+import Cookie from "universal-cookie";
 
 export const interceptor = (api: AxiosInstance) => {
   const requestHandler = (request: any) => {
@@ -7,7 +7,7 @@ export const interceptor = (api: AxiosInstance) => {
     const token = cookie.get("token_user");
 
     if (token && request.headers) {
-      request.headers.Authorization = `Bearer ${token}`
+      request.headers.Authorization = `Bearer ${token}`;
     }
     return request;
   };
@@ -35,4 +35,4 @@ export const interceptor = (api: AxiosInstance) => {
     (response) => responseHandler(response),
     (error) => errorHandler(error)
   );
-}
+};

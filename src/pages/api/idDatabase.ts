@@ -1,54 +1,55 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { getSession } from "next-auth/react";
-import { query as q } from 'faunadb'
+import { query as q } from "faunadb";
 import { fauna } from "../../services/fauna";
 
 type User = {
   ref: {
-    id: string
+    id: string;
   },
   data: {
-    idDatabase: string
+    idDatabase: string;
   }
 }
+
 const apiNext = async (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method === 'POST') {
+  if (req.method === "POST") {
     const session = await getSession({ req })
 
     const user = await fauna.query<User>(
       q.Get(
         q.Match(
-          q.Index('user_by_email'),
+          q.Index("user_by_email"),
           q.Casefold(session.user.email)
         )
       )
     )
 
-    let idDatabaseNotion = user.data.idDatabase
+    let idDatabaseNotion = user.data.idDatabase;
 
     if (!idDatabaseNotion) {
-      const { idDatabase } = req.body
+      const { idDatabase } = req.body;
       await fauna.query(
         q.Update(
-          q.Ref(q.Collection('user'), user.ref.id),
+          q.Ref(q.Collection("user"), user.ref.id),
           {
             data: {
               idDatabase, idDatabaseNotion
             }
           }
         )
-      )
+      );
 
-      idDatabaseNotion = idDatabase
+      idDatabaseNotion = idDatabase;
     }
     res.setHeader("Cache-Control", "s-maxage=5, stale-while-revalidate");
 
-    return res.status(200).json({ idDatabase: idDatabaseNotion })
+    return res.status(200).json({ idDatabase: idDatabaseNotion });
   } else {
-    res.setHeader('Allow', "POST")
-    res.status(405).end('Method not allowed')
+    res.setHeader("Allow", "POST");
+    res.status(405).end("Method not allowed");
   }
 
 }
 
-export default apiNext
+export default apiNext;

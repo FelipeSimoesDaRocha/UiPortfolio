@@ -1,9 +1,9 @@
 import styles from "./styles.module.css";
 import Image from "next/image";
-import img from "../../../public/assets/img.png"
-import img2 from "../../../public/assets/img2.png"
-import img3 from "../../../public/assets/img3.png"
-import img4 from "../../../public/assets/img4.png"
+import img from "../../../public/assets/img.png";
+import img2 from "../../../public/assets/img2.png";
+import img3 from "../../../public/assets/img3.png";
+import img4 from "../../../public/assets/img4.png";
 
 import { useTranslation } from "react-i18next";
 
@@ -21,7 +21,7 @@ const Work = () => {
             imgUrl: img,
             video: "",
             linkGit: "",
-            linkProdution: "",
+            linkProdution: ""
         },
         {
             key: 2,
@@ -30,7 +30,7 @@ const Work = () => {
             imgUrl: img2,
             video: "",
             linkGit: "https://github.com/FelipeSimoesDaRocha/UiFinances",
-            linkProdution: "https://ui-finances.vercel.app/",
+            linkProdution: "https://ui-finances.vercel.app/"
         },
         {
             key: 3,
@@ -39,7 +39,7 @@ const Work = () => {
             imgUrl: img3,
             video: "",
             linkGit: "https://github.com/WarwickBr1/Ntf-expert",
-            linkProdution: "https://ntf-expert.vercel.app/",
+            linkProdution: "https://ntf-expert.vercel.app/"
         },
         {
             key: 4,
@@ -48,7 +48,7 @@ const Work = () => {
             imgUrl: img4,
             video: "",
             linkGit: "https://github.com/WarwickBr1/Dev-expert",
-            linkProdution: "https://dev-expert-ten.vercel.app/",
+            linkProdution: "https://dev-expert-ten.vercel.app/"
         }
     ] as unknown as Project[];
 

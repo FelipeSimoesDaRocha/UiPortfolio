@@ -26,18 +26,18 @@ i18n
     resources,
     lng: "pt",
     fallbackLng: "pt",
-    // defaultNS: 'translations',
+    // defaultNS: "translations",
     // keySeparator: false,
     detection: { checkWhitelist: true },
     debug: false,
     whitelist: availableLanguages,
     interpolation: {
       escapeValue: false,
-      formatSeparator: ',',
+      formatSeparator: ","
     },
     react: {
       useSuspense: true,
-      wait: true,
+      wait: true
     },
   } as unknown as Callback);
 

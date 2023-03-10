@@ -35,12 +35,12 @@ const Header = () => {
     {
       name: "Projetos",
       route: "/#work",
-      enName: "Projects",
+      enName: "Projects"
     },
     {
       name: "Sobre",
       route: "/#about",
-      enName: "About",
+      enName: "About"
     }
   ];
 
@@ -118,7 +118,7 @@ const Header = () => {
             {session.user.image && (
               <span
                 onClick={() => setModal(true)}
-                style={{ backgroundImage: `url('${session.user.image}')` }}
+                style={{ backgroundImage: `url("${session.user.image}")` }}
                 className={styles.avatar}
               />
             )}
@@ -133,7 +133,7 @@ const Header = () => {
                       {session.user.image && (
                         <span
                           onClick={() => setModal(true)}
-                          style={{ backgroundImage: `url('${session.user.image}')` }}
+                          style={{ backgroundImage: `url("${session.user.image}")` }}
                           className={styles.avatar}
                         />
                       )}
