@@ -1,5 +1,8 @@
+// pra ativar use (_middleware.ts)
+
+
 import { NextRequest, NextResponse } from "next/server";
-import { getSession } from "next-auth/client";
+import { getSession } from "next-auth/react";
 import parseUrl from "../../lib/parseUrl";
 
 async function handle(req: NextRequest, res: NextResponse) {

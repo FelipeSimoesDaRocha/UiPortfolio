@@ -3,7 +3,9 @@
         "Hello": "Olá",
         "label": "Olá, eu sou",
         "text": "Minha paixão é sonhar com ideias e torná-las realidade com interfaces elegantes.",
-        "blockquote": "Sempre em busca do proximo nivel."
+        "blockquote": "Sempre em busca do proximo nivel.",
+        "Signin": "Entrar",
+        "Signout": "Sair"
     },
     "work": {
         "label": "Uma pequena seleção do meu trabalho."

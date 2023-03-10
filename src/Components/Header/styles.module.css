@@ -4,7 +4,7 @@
   top: 0;
   right: 0;
   bottom: auto;
-  padding: 4px 4px 0;
+  padding: 4px 20px 0;
   align-items: center;
   z-index: 100;
   background-color: transparent;
@@ -17,7 +17,7 @@
   top: 0;
   right: 0;
   bottom: auto;
-  padding: 4px 4px 0;
+  padding: 4px 20px 0;
   align-items: center;
   z-index: 100;
   background-color: hsla(0, 0%, 0%, 0.7);
@@ -52,68 +52,14 @@
   transition: all 1s ease;
 }
 
-.nav_lang svg {
-  fill: #fff;
-  font-size: 2.2em;
-}
+@media screen and (max-width: 991px) {
+  .nav {
+    justify-content: space-between;
+  }
 
-.nav_lang button {
-  height: auto;
-  width: auto;
-}
-
-.nav_lang button :hover {
-  fill: #333;
-  transition: fill 0.25s ease;
-}
-
-.lang {
-  position: absolute;
-  top: 50px;
-  right: -8px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  gap: 2px;
-  list-style: none;
-  float: left;
-}
-
-.lang button {
-  background: #f3dede1e;
-  width: 60px;
-  height: 35px;
-  border: none;
-  color: #fff;
-  font-weight: 600;
-}
-
-.lang button:hover {
-  background: #f3dede45;
-  color: #fff !important;
-  text-shadow: 0px 0px 5px #fff;
-}
-
-.langDark {
-  position: absolute;
-  top: 50px;
-  right: -8px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  gap: 2px;
-  list-style: none;
-  float: left;
-}
-
-.langDark button {
-  width: 60px;
-  height: 35px;
-  border: none;
-  color: #000000;
-  font-weight: 600;
+  .nav_active {
+    justify-content: space-between;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -128,4 +74,112 @@
   .menu {
     display: block;
   }
+
+  .nav {
+    justify-content: space-between;
+  }
+}
+
+.avatar {
+  border-radius: 2rem;
+  float: left;
+  height: 2.8rem;
+  width: 2.8rem;
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid #00000033;
+}
+
+.modal {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  bottom: 0;
+  min-width: 340px;
+}
+
+.modalContainer {
+  margin-top: 10px;
+  background: #ffffffd9;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: max(0px, min(8px, ((100vw - 4px) - 100%) * 9999)) / 8px;
+  gap: 1rem;
+  box-shadow: 0px 0px 20px 0px #000000b9;
+
+}
+
+.modalHeaderContainer{
+  width: 90%;
+  margin-top: 1rem;
+  box-shadow: 0px 0px 20px 0px #00000033;
+  border-radius: max(0px, min(8px, ((100vw - 4px) - 100%) * 9999)) / 8px;
+}
+
+
+.modalHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: max(0px, min(8px, ((100vw - 4px) - 100%) * 9999)) / 8px;
+  background: #fff;
+}
+
+.modalHero {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  margin: 0 !important;
+}
+
+.modalHeroList {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  box-shadow: 0px 0px 20px 0px #00000033;
+  border-radius: max(0px, min(8px, ((100vw - 4px) - 100%) * 9999)) / 8px;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+}
+
+.modal button {
+  background: #f3dede1e;
+  width: 60px;
+  height: 35px;
+  border: none;
+  font-weight: 600;
+}
+
+.modal button:hover {
+  background: #f3dede45;
+  text-shadow: 0px 0px 5px #fff;
+}
+
+.modalDark {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  bottom: 0;
+  min-width: 340px;
+}
+
+.modalDark button {
+  width: 60px;
+  height: 35px;
+  border: none;
+  color: #000000;
+  font-weight: 600;
+}
+
+.global svg {
+  font-size: 1.2em;
 }

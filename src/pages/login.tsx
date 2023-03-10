@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next'
 import { Button, Flex, Heading, Icon, IconButton, Text } from '@chakra-ui/react'
-import { getSession, signIn } from 'next-auth/client'
+import { getSession, signIn } from 'next-auth/react'
 import { RiGithubFill, RiGoogleFill } from 'react-icons/ri'
 
 export default function Login() {

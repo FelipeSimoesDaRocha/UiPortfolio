@@ -6,18 +6,20 @@ import Head from "next/head";
 
 // Styles
 import "../styles/globals.css";
-import "../../public/fonts/SpaceGrotesk.css?display=swap";
 import { theme } from "../styles/theme";
+
+//Font
+import "../../public/fonts/SpaceGrotesk.css?display=swap";
 
 // Translate
 import "../i18nextInit";
 
 // Providers
-import { Provider as SessionProvider  } from 'next-auth/client'
+import { SessionProvider } from 'next-auth/react'
 import { ApolloProvider } from "@apollo/client";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ChakraProvider } from "@chakra-ui/react";
-import { SidebarDrawerProvider } from "../context/SidebarDrawerContext";
+import type { Session } from "next-auth"
 
 // Services
 import clientApollo from "services/apollo-client";
@@ -26,7 +28,7 @@ import { queryClient } from "services/querryClient";
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
 
-function MyApp({ Component, pageProps : { session, ...pageProps }}: AppProps) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps<{ session: Session }>) {
   useEffect(() => {
     if (localStorage.i18nextLng) {
       localStorage.setItem("i18nextLng", "pt");
@@ -80,27 +82,25 @@ function MyApp({ Component, pageProps : { session, ...pageProps }}: AppProps) {
         <meta property="og:url" content="" />
         <meta property="og:image" content="" />
       </Head>
-      <SessionProvider  session={session}>
+      <SessionProvider session={session}>
         <ApolloProvider client={clientApollo}>
           <QueryClientProvider client={queryClient}>
             <ChakraProvider theme={theme}>
-              <SidebarDrawerProvider>
-                <Script
-                  id="my-script"
-                  data-name="BMC-Widget"
-                  data-cfasync="false"
-                  src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-                  data-id="feliperocha"
-                  data-description="Support me on Buy me a coffee!"
-                  data-message=""
-                  data-color="#bdf523"
-                  data-position="Right"
-                  data-x_margin="18"
-                  data-y_margin="18">
-                </Script>
-                <Component {...pageProps} />
-                <Analytics />
-              </SidebarDrawerProvider>
+              <Script
+                id="my-script"
+                data-name="BMC-Widget"
+                data-cfasync="false"
+                src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+                data-id="feliperocha"
+                data-description="Support me on Buy me a coffee!"
+                data-message=""
+                data-color="#bdf523"
+                data-position="Right"
+                data-x_margin="18"
+                data-y_margin="18">
+              </Script>
+              <Component {...pageProps} />
+              <Analytics />
             </ChakraProvider>
           </QueryClientProvider>
         </ApolloProvider>
