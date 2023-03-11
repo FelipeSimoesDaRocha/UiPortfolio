@@ -1,0 +1,33 @@
+.container {
+    background: #191622;
+    border-radius: 10px;
+    font-weight: 400;
+}
+
+.container pre {
+    display: flex;
+    margin: 0.5em 0;
+}
+
+.container pre:hover {
+    background: #4c4563;
+}
+
+.container code {
+    color: #f8f8f2;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.packageName {
+    color: #988bc7 !important;
+}
+
+.version {
+    color: #fffb00 !important;
+}
+
+.separator {
+    color: #c658a5;
+}

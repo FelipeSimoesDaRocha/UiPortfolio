@@ -28,7 +28,8 @@ const Header = () => {
 
   const { t, i18n } = useTranslation();
 
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
+  const loading = status === "loading";
 
   const [languageSelected, setLanguageSelected] = useState("");
   const navigationsItems: LinkItemsProps[] = [
@@ -101,7 +102,7 @@ const Header = () => {
         ))}
       </Col>
 
-      <Col>
+      <Col className={`${!session && loading ? styles.loading : styles.loaded}`}>
         {!session && (
           <Button
             href={`/api/auth/signin`}
