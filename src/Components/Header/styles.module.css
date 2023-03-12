@@ -6,14 +6,13 @@
   right: 0;
   bottom: auto;
   z-index: 100;
-
   background-color: transparent;
   transition: background-color 1.2s;
-  backdrop-filter: blur(10px);
 }
 
 .nav_active {
   background: hsla(0, 0%, 0%, 0.7);
+  backdrop-filter: blur(5px);
 }
 
 .page_padding {
@@ -94,34 +93,6 @@
   opacity: 0;
 }
 
-@media screen and (max-width: 991px) {
-  .nav {
-    justify-content: space-between;
-  }
-
-  .nav_active {
-    justify-content: space-between;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .logo {
-    display: none;
-  }
-
-  .nav_menu {
-    display: none;
-  }
-
-  .menu {
-    display: block;
-  }
-
-  .nav {
-    justify-content: space-between;
-  }
-}
-
 .avatar {
   border-radius: 2rem;
   float: left;
@@ -131,11 +102,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   border: 1px solid #00000033;
+  transition: all 1s ease;
 }
 
 .avatar:hover {
   opacity: 0.8;
-  transition: all 200ms;
+  transition: all 200ms ease;
 }
 
 .modal {
@@ -226,4 +198,32 @@
 
 .global svg {
   font-size: 1.2em;
+}
+
+@media screen and (max-width: 991px) {
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav_active {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .logo {
+    display: none;
+  }
+
+  .nav_menu {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
 }

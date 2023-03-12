@@ -1,19 +1,22 @@
 // Next
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 
 // Styles
 import styles from "./styles.module.css";
+
+// Icons
 import { GiHamburgerMenu } from "react-icons/gi";
+
+// Icons
+import { FaGlobeAmericas } from "react-icons/fa";
 
 // Translate
 import { useTranslation } from "react-i18next";
-import { FaGlobeAmericas } from "react-icons/fa";
 
 // Models
 import { LinkItemsProps } from "../../models";
-import { Button } from "@chakra-ui/react";
 
 
 const Header = () => {
@@ -29,7 +32,7 @@ const Header = () => {
   const { data: session, status } = useSession();
   const loading = status === "loading";
 
-  const [languageSelected, setLanguageSelected] = useState("pt");
+  const [languageSelected, setLanguageSelected] = useState("");
   const navigationsItems: LinkItemsProps[] = [
     {
       name: "Projetos",
@@ -44,22 +47,9 @@ const Header = () => {
   ];
 
   const handleChangeBackground = () => {
-    if (window.scrollY >= 80) {
-      setNavBar(true);
-    } else {
-      setNavBar(false);
-    }
-
-    if (window.scrollY >= 800) {
-      setModalStyle(true);
-    } else {
-      setModalStyle(false);
-    }
+    setNavBar(window.scrollY >= 80);
+    setModalStyle(window.scrollY >= 800);
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleChangeBackground);
-  }, []);
 
   const handleChangeLng = (lng: string) => {
     setLanguageSelected(lng);
@@ -68,15 +58,23 @@ const Header = () => {
     setModal(false);
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleChangeBackground);
+    const item = `${localStorage.getItem('i18nextLng')}`;
+    setLanguageSelected(item);
+  }, []);
+
   return (
     <nav className={navbar ? `${styles.nav_active}` : `${styles.nav}`}>
       <div className={styles.page_padding}>
         <div className={styles.container}>
           <div className={styles.nav_inner}>
             <div className={styles.logo} >
-              <a href="/#" aria-label="inicio">
-                Felipe Rocha
-              </a>
+              <Link href="/#">
+                <a aria-label="inicio">
+                  Felipe Rocha
+                </a>
+              </Link>
             </div>
 
             <div className={styles.menu} onClick={handleShowMenu}>
@@ -85,8 +83,8 @@ const Header = () => {
 
             <div className={styles.nav_menu}>
               {navigationsItems.map((navItem, index) => (
-                <Link key={index} href={navItem.route} >
-                  {languageSelected ? navItem.name : navItem.enName}
+                <Link key={index} href={navItem.route}>
+                  {languageSelected === "pt" ? navItem.name : navItem.enName}
                 </Link>
               ))}
             </div>
@@ -95,6 +93,7 @@ const Header = () => {
               {!session && (
                 <Link href={`/api/auth/signin`}>
                   <a
+                    aria-label="Login"
                     onClick={(e) => {
                       e.preventDefault()
                       signIn()
@@ -119,12 +118,10 @@ const Header = () => {
                   ) : (
                     <span id="lang" className={modalStyle ? `${styles.modalDark}` : `${styles.modal}`}>
                       <div className={styles.modalContainer}>
-
                         <div className={styles.modalHeaderContainer}>
                           <div className={styles.modalHeader}>
                             {session.user.image && (
                               <span
-                                onClick={() => setModal(true)}
                                 style={{ backgroundImage: `url("${session.user.image}")` }}
                                 className={styles.avatar}
                               />
@@ -132,33 +129,31 @@ const Header = () => {
                             <strong>{session.user.name ?? session.user.email}</strong>
                           </div>
                         </div>
-
                         <div className={styles.modalHero}>
                           <div className={styles.modalHeroList}>
                             <FaGlobeAmericas />
                             <>
-                              <Button onClick={() => handleChangeLng("pt")} aria-label="Português"> PT</Button>
-                              <Button onClick={() => handleChangeLng("en")} aria-label="English" >EN</Button>
+                              <button onClick={() => handleChangeLng("pt")} aria-label="Português">PT</button>
+                              <button onClick={() => handleChangeLng("en")} aria-label="English">EN</button>
                             </>
                           </div>
-
-                          <a
-                            href={`/api/auth/signout`}
-                            onClick={(e) => {
-                              e.preventDefault()
-                              signOut()
-                            }}
-                          >
-                            {t("hero.Signout")}
-                          </a>
+                          <Link href={`/api/auth/signout`}>
+                            <a
+                              aria-label="Sair"
+                              onClick={(e) => {
+                                e.preventDefault()
+                                signOut()
+                              }}
+                            >
+                              {t("hero.Signout")}
+                            </a>
+                          </Link>
                         </div>
-
                       </div>
                     </span>)
                   }
                 </>
               )}
-
             </div>
           </div>
         </div>
