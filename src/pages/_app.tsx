@@ -9,7 +9,7 @@ import "../styles/globals.css";
 import { theme } from "../styles/theme";
 
 //Fonts
-import "../../public/fonts/SpaceGrotesk.css?display=swap";
+import "../../public/fonts/SpaceGrotesk.css";
 
 // Translate
 import "../i18nextInit";

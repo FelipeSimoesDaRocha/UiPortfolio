@@ -40,6 +40,7 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
   font-feature-settings: "case" 1, "cpsp" 1, "dlig" 1, "cv01" 1, "cv02", "cv03" 1, "cv04" 1;
   letter-spacing: -0.02em;
+  line-height: 1.2 !important;
 }
 
 body,
