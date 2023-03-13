@@ -77,7 +77,6 @@ blockquote::after {
 ::selection {
   background-color: transparent;
   color: #11a36a;
-  text-shadow: 2px 2px #000;
 }
 
 ::-webkit-scrollbar {
@@ -86,7 +85,7 @@ blockquote::after {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: -webkit-gradient(transparent, #11a36a);
+  background: -webkit-gradient(transparent, #390faa);
   background: linear-gradient(transparent, #11a36a);
   border-radius: 20px;
 }

@@ -47,6 +47,18 @@
   padding: 6px 16px;
   font-size: 20px;
   font-weight: 500;
+  transition: all 2s ease;
+}
+
+.logo a {
+  color: #899197;
+  transition: all 1s ease;
+}
+
+
+.logo a:hover {
+  color: #fff;
+  transition: all 1s ease;
 }
 
 .menu {

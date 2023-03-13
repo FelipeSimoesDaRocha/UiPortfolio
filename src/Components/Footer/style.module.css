@@ -27,6 +27,10 @@
     align-items: center;
 }
 
+.footer_links a {
+    color: black;
+}
+
 .footer_link {
     display: block;
     padding: 8px 14px;

@@ -6,27 +6,35 @@ import Head from "next/head";
 
 // Styles
 import "../styles/globals.css";
-import { theme } from "../styles/theme";
+import { theme } from 'styles/theme'
 
-//Fonts
+// Fonts
 import "../../public/fonts/SpaceGrotesk.css";
 
 // Translate
 import "../i18nextInit";
 
+// Context
+import ContextMenu from "Components/ContextMenu";
+
+// Services
+import clientApollo from "services/apollo-client";
+
+// Utils
+import { queryClient } from "utils/querryClient";
+
+// Analytics
+import { Analytics } from "@vercel/analytics/react";
+
+// Auth
+import type { Session } from "next-auth";
+
 // Providers
 import { SessionProvider } from "next-auth/react";
 import { ApolloProvider } from "@apollo/client";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { ChakraProvider } from "@chakra-ui/react";
-import type { Session } from "next-auth";
+import { ThemeProvider } from "styled-components";
 
-// Services
-import clientApollo from "services/apollo-client";
-import { queryClient } from "services/querryClient";
-
-// Analytics
-import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps<{ session: Session }>) {
   useEffect(() => {
@@ -85,23 +93,25 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps<{ s
       <SessionProvider session={session}>
         <ApolloProvider client={clientApollo}>
           <QueryClientProvider client={queryClient}>
-            <ChakraProvider theme={theme}>
-              <Script
-                id="my-script"
-                data-name="BMC-Widget"
-                data-cfasync="false"
-                src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-                data-id="feliperocha"
-                data-description="Support me on Buy me a coffee!"
-                data-message=""
-                data-color="#bdf523"
-                data-position="Right"
-                data-x_margin="18"
-                data-y_margin="18">
-              </Script>
-              <Component {...pageProps} />
-              <Analytics />
-            </ChakraProvider>
+            <ThemeProvider theme={theme}>
+              <ContextMenu>
+                <Script
+                  id="my-script"
+                  data-name="BMC-Widget"
+                  data-cfasync="false"
+                  src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+                  data-id="feliperocha"
+                  data-description="Support me on Buy me a coffee!"
+                  data-message=""
+                  data-color="#bdf523"
+                  data-position="Right"
+                  data-x_margin="18"
+                  data-y_margin="18">
+                </Script>
+                <Component {...pageProps} />
+                <Analytics />
+              </ContextMenu>
+            </ThemeProvider>
           </QueryClientProvider>
         </ApolloProvider>
       </SessionProvider>

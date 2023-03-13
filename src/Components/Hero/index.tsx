@@ -10,7 +10,7 @@ import { TypeAnimation } from "react-type-animation";
 // Translations
 import { useTranslation } from "react-i18next";
 
-import BackgroundAnimation from "../svg/BgAnimation";
+import BackgroundAnimation from "./BgAnimation";
 import Img from "../../../public/assets/photo.png";
 import Banner from "../../../public/assets/banner.png";
 
@@ -20,10 +20,10 @@ const Hero = () => {
 
   return (
     <section id="home" className={styles.hero_ui_intro} >
-      <BackgroundAnimation />
       <div className={styles.page_padding}>
         <div className={styles.container}>
           <div className={styles.ui_intro_inner}>
+            <BackgroundAnimation />
             <div className={styles.intro_wrap}>
               <div className={styles.intro_content}>
                 <div className={styles.heading_ui_wrap}>
