@@ -7,10 +7,7 @@ import Link from "next/link";
 import styles from "./styles.module.css";
 
 // Icons
-import { GiHamburgerMenu } from "react-icons/gi";
-
-// Icons
-import { FaGlobeAmericas } from "react-icons/fa";
+import { FaGlobeAmericas, FaHouseUser } from "react-icons/fa";
 
 // Translate
 import { useTranslation } from "react-i18next";
@@ -18,6 +15,18 @@ import { useTranslation } from "react-i18next";
 // Models
 import { LinkItemsProps } from "../../models";
 
+const navigationsItems: LinkItemsProps[] = [
+  {
+    name: "Projetos",
+    route: "/#work",
+    enName: "Projects"
+  },
+  {
+    name: "Sobre",
+    route: "/#about",
+    enName: "About"
+  }
+];
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -33,18 +42,6 @@ const Header = () => {
   const loading = status === "loading";
 
   const [languageSelected, setLanguageSelected] = useState("");
-  const navigationsItems: LinkItemsProps[] = [
-    {
-      name: "Projetos",
-      route: "/#work",
-      enName: "Projects"
-    },
-    {
-      name: "Sobre",
-      route: "/#about",
-      enName: "About"
-    }
-  ];
 
   const handleChangeBackground = () => {
     setNavBar(window.scrollY >= 80);
@@ -76,11 +73,9 @@ const Header = () => {
                 </a>
               </Link>
             </div>
-
             <div className={styles.menu} onClick={handleShowMenu}>
-              <GiHamburgerMenu />
+              <FaHouseUser />
             </div>
-
             <div className={styles.nav_menu}>
               {navigationsItems.map((navItem, index) => (
                 <Link key={index} href={navItem.route}>
@@ -116,41 +111,56 @@ const Header = () => {
                   {!modal ? (
                     <></>
                   ) : (
-                    <span id="lang" className={modalStyle ? `${styles.modalDark}` : `${styles.modal}`}>
-                      <div className={styles.modalContainer}>
-                        <div className={styles.modalHeaderContainer}>
-                          <div className={styles.modalHeader}>
-                            {session.user.image && (
-                              <span
-                                style={{ backgroundImage: `url("${session.user.image}")` }}
-                                className={styles.avatar}
-                              />
-                            )}
-                            <strong>{session.user.name ?? session.user.email}</strong>
+                    <div className={modalStyle ? `${styles.modal_active}` : `${styles.modal}`}>
+                      <div className={styles.page_padding_modal}>
+                        <div className={styles.modal_container}>
+                          <div className={styles.modal_inner}>
+
+                            <div className={styles.modal_header}>
+                              <div className={styles.modal_header_content}>
+                                {session.user.image && (
+                                  <span
+                                    style={{ backgroundImage: `url("${session.user.image}")` }}
+                                    className={styles.avatar}
+                                  />
+                                )}
+                                <strong>{session.user.name ?? session.user.email}</strong>
+                              </div>
+                            </div>
+
+                            <div className={styles.modal_hero}>
+                              <div className={styles.modal_hero_content}>
+                                <div className={styles.list}>
+                                  <div className={styles.icon}>
+                                    <FaGlobeAmericas size={20} />
+                                  </div>
+                                  <span>
+                                    <button className={languageSelected === "pt" ? `${styles.btnActive}` : `${styles.btnLng}`} onClick={() => handleChangeLng("pt")} aria-label="Português">PT</button>
+                                    <button className={languageSelected === "en" ? `${styles.btnActive}` : `${styles.btnLng}`} onClick={() => handleChangeLng("en")} aria-label="English">EN</button>
+                                  </span>
+                                  <span />
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                            <Link href={`/api/auth/signout`}>
+                              <a
+                                aria-label="Sair"
+                                onClick={(e) => {
+                                  e.preventDefault()
+                                  signOut()
+                                }}
+                              >
+                                {t("hero.Signout")}
+                              </a>
+                            </Link>
+
                           </div>
-                        </div>
-                        <div className={styles.modalHero}>
-                          <div className={styles.modalHeroList}>
-                            <FaGlobeAmericas />
-                            <>
-                              <button onClick={() => handleChangeLng("pt")} aria-label="Português">PT</button>
-                              <button onClick={() => handleChangeLng("en")} aria-label="English">EN</button>
-                            </>
-                          </div>
-                          <Link href={`/api/auth/signout`}>
-                            <a
-                              aria-label="Sair"
-                              onClick={(e) => {
-                                e.preventDefault()
-                                signOut()
-                              }}
-                            >
-                              {t("hero.Signout")}
-                            </a>
-                          </Link>
                         </div>
                       </div>
-                    </span>)
+                    </div>)
                   }
                 </>
               )}
