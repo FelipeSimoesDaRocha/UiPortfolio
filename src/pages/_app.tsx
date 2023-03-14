@@ -22,6 +22,7 @@ import clientApollo from "services/apollo-client";
 
 // Utils
 import { queryClient } from "utils/querryClient";
+import { initLogRocket } from "utils/logrocket";
 
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
@@ -37,7 +38,10 @@ import { ThemeProvider } from "styled-components";
 
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps<{ session: Session }>) {
+
   useEffect(() => {
+    initLogRocket();
+
     if (localStorage.i18nextLng) {
       localStorage.setItem("i18nextLng", "pt");
     }
@@ -46,7 +50,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps<{ s
   return (
     <>
       <Head>
-        X-XSS-Protection: 1; mode=block
         <meta charSet="utf-8" />
         <title>Felipe Rocha</title>
         <meta name="robots" content="follow,index" />
