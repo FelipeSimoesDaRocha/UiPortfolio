@@ -2,7 +2,7 @@
     position: relative;
     padding-bottom: 140px;
     padding-top: 3rem;
-    background: #f1f3f5;
+    background: var(--fff);
 }
 
 .page_padding {
@@ -28,7 +28,7 @@
     line-height: 1.1;
     font-weight: 500;
     letter-spacing: -0.03em;
-    color: black;
+    color: var(--000);
 }
 
 .projects_list {
@@ -95,7 +95,7 @@
     overflow: hidden;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    box-shadow: 0 0 30px 0 #272121;
+    box-shadow: 0 0 30px 0 var(--shadow);
     transform-origin: 50% 100%;
     transition: border-radius 0.2s, transform 0.2s, -webkit-transform 0.2s;
     -webkit-transform: scale(0.85);

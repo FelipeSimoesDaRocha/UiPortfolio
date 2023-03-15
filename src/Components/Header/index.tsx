@@ -19,14 +19,19 @@ const navigationsItems: LinkItemsProps[] = [
   {
     name: "Projetos",
     route: "/#work",
-    enName: "Projects"
+    enName: "Projects",
+    tabIndex: 2,
+    ariaLabel: "Projects"
   },
   {
     name: "Sobre",
     route: "/#about",
-    enName: "About"
+    enName: "About",
+    tabIndex: 3,
+    ariaLabel: "About"
   }
 ];
+
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -68,7 +73,7 @@ const Header = () => {
           <div className={styles.nav_inner}>
             <div className={styles.logo} >
               <Link href="/#">
-                <a aria-label="inicio">
+                <a aria-label="inicio" tabIndex={1}>
                   Felipe Rocha
                 </a>
               </Link>
@@ -78,12 +83,13 @@ const Header = () => {
             </div>
             <div className={styles.nav_menu}>
               {navigationsItems.map((navItem, index) => (
-                <Link key={index} href={navItem.route}>
-                  {languageSelected === "pt" ? navItem.name : navItem.enName}
+                <Link key={index} href={navItem.route} >
+                  <a aria-label={navItem.ariaLabel} tabIndex={navItem.tabIndex}>
+                    {languageSelected === "pt" ? navItem.name : navItem.enName}
+                  </a>
                 </Link>
               ))}
             </div>
-
             <div className={`${!session && loading ? styles.loading : styles.loaded}`}>
               {!session && (
                 <Link href={`/api/auth/signin`}>
@@ -98,11 +104,11 @@ const Header = () => {
                   </a>
                 </Link>
               )}
-
               {session?.user && (
                 <>
                   {session.user.image && (
                     <span
+                      tabIndex={4}
                       onClick={() => setModal(true)}
                       style={{ backgroundImage: `url("${session.user.image}")` }}
                       className={styles.avatar}
@@ -115,7 +121,6 @@ const Header = () => {
                       <div className={styles.page_padding_modal}>
                         <div className={styles.modal_container}>
                           <div className={styles.modal_inner}>
-
                             <div className={styles.modal_header}>
                               <div className={styles.modal_header_content}>
                                 {session.user.image && (
@@ -127,7 +132,6 @@ const Header = () => {
                                 <strong>{session.user.name ?? session.user.email}</strong>
                               </div>
                             </div>
-
                             <div className={styles.modal_hero}>
                               <div className={styles.modal_hero_content}>
                                 <div className={styles.list}>
@@ -140,11 +144,8 @@ const Header = () => {
                                   </span>
                                   <span />
                                 </div>
-
                               </div>
-
                             </div>
-
                             <Link href={`/api/auth/signout`}>
                               <a
                                 aria-label="Sair"
@@ -156,7 +157,6 @@ const Header = () => {
                                 {t("hero.Signout")}
                               </a>
                             </Link>
-
                           </div>
                         </div>
                       </div>
@@ -168,7 +168,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </nav >
   );
 };
 

@@ -2,6 +2,8 @@ export type LinkItemsProps = {
     name: string;
     route: string;
     enName: string;
+    tabIndex: number;
+    ariaLabel: string;
 }
 
 export type Project = {

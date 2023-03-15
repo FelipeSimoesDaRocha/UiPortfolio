@@ -14,11 +14,11 @@
 }
 
 .footer_inner {
+    color: var(--000);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    cursor: pointer;
 }
 
 .footer_links {
@@ -28,7 +28,7 @@
 }
 
 .footer_links a {
-    color: black;
+    color: var(--000);
 }
 
 .footer_link {

@@ -51,19 +51,18 @@
 }
 
 .logo a {
-  color: #899197;
+  color: var(--888);
   transition: all 1s ease;
 }
 
-
 .logo a:hover {
-  color: #fff;
+  color: var(--fff);
   transition: all 1s ease;
 }
 
 .menu {
   display: none;
-  color: white;
+  color: var(--fff);
   font-size: 2rem;
   cursor: pointer;
 }
@@ -76,12 +75,12 @@
   position: relative;
   z-index: 102;
   padding: 8px 14px;
-  color: #687076;
+  color: var(--888);
   transition: all 1s ease;
 }
 
 .nav_menu a:hover {
-  color: #fff;
+  color: var(--fff);
   transition: all 1s ease;
 }
 
@@ -97,7 +96,7 @@
   display: flex;
   padding: 8px 20px;
   align-items: center;
-  color: #fff;
+  color: var(--fff);
   font-weight: 500;
 }
 
@@ -110,10 +109,9 @@
   float: left;
   height: 2.8rem;
   width: 2.8rem;
-  background-color: #fff;
+  color: var(--fff);
   background-size: cover;
   background-repeat: no-repeat;
-  border: 1px solid #00000033;
   transition: all 1s ease;
 }
 
@@ -129,14 +127,13 @@
   right: 0;
   bottom: auto;
 
-  background-color: #ffffffd9;
-  color: #000;
+  background-color: var(--fff);
+  color: var(--000);
   border-radius: 8px;
   transition: background-color 1.2s;
 }
 
 .modal_active {
-  background: hsla(0, 0%, 0%, 0.7);
   backdrop-filter: blur(5px);
 }
 
@@ -185,7 +182,7 @@
   padding: 1rem;
   gap: 1rem;
   border-radius: 8px;
-  background: #fff;
+  background: var(--cl-fff);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -217,12 +214,12 @@
 
 .btnActive {
   border-radius: 8px;
-  color: #fff;
-  background-color: #6674f3 !important;
+  color: var(--fff);
+  background-color: var(--222) !important;
 }
 
 .modal_inner button {
-  background: #f3dede1e;
+  border-radius: 8px;
   width: 60px;
   height: 35px;
   border: none;
@@ -232,12 +229,9 @@
 .modal_inner button:hover {
   background: #00000033;
   border-radius: 8px;
-  text-shadow: 0px 0px 5px #fff;
+  text-shadow: 0px 0px 5px var(--fff);
 }
 
-.modal_active a {
-  color: #fff;
-}
 
 .global svg {
   font-size: 1.2em;
