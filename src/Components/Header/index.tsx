@@ -93,7 +93,7 @@ const Header = () => {
             <div className={`${!session && loading ? styles.loading : styles.loaded}`}>
               {!session && (
                 <Link href={`/api/auth/signin`}>
-                  <a
+                  <a style={{color:"var(--888)"}}
                     aria-label="Login"
                     onClick={(e) => {
                       e.preventDefault()

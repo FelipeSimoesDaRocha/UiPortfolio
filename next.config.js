@@ -24,7 +24,8 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     appDir: true,
-    runtime: "experimental-edge"
+    runtime: "experimental-edge",
+    images: { allowFutureImage: true }
   },
   webpack: config => {
     config.module.rules.push({
