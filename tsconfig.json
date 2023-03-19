@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,18 +15,9 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": "src",
-    "noImplicitAny": false,
+    "noImplicitAny": false
   },
-  "files": [
-    "src/types/graphql.d.ts"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.gql"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "files": ["src/types/graphql.d.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.gql"],
+  "exclude": ["node_modules"]
 }
