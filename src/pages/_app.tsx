@@ -6,7 +6,6 @@ import Head from "next/head";
 
 // Styles
 import "../styles/globals.css";
-import { theme } from 'styles/theme'
 
 // Fonts
 import "../../public/fonts/SpaceGrotesk.css";
@@ -96,7 +95,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps<{ s
       <SessionProvider session={session}>
         <ApolloProvider client={clientApollo}>
           <QueryClientProvider client={queryClient}>
-            <ThemeProvider theme={theme}>
               <ContextMenu>
                 <Script
                   id="my-script"
@@ -114,7 +112,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps<{ s
                 <Component {...pageProps} />
                 <Analytics />
               </ContextMenu>
-            </ThemeProvider>
           </QueryClientProvider>
         </ApolloProvider>
       </SessionProvider>
